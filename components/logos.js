@@ -18,21 +18,17 @@ padding: 10px;
 `
 
 const Logo = () => {
-	const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
+	const logoImg = `/images/b_logo${useColorModeValue('', '_dark')}.jpg`
 	return (
 		<Link href = "/">
-			{/*<a>*/}
-				<LogoBox>
-					<Image src={footPrintImg} width={20} height={20} alt="logo"/>
-					<Text color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-						fontFamily='M PLUS Rounded 1c'
-						fontWeight="bold"
-						ml={3}
-					>
-					Bumjin Joo
-					</Text>
-				</LogoBox>
-			{/*</a>*/}
+			<LogoBox>
+				<Image src={logoImg} width={20} height={20} alt="logo"/>
+				<Text color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+					ml={3}
+				>
+				Bumjin Joo
+				</Text>
+			</LogoBox>
 		</Link>
 	)
 }

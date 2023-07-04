@@ -1,6 +1,5 @@
-import Logo from './logos'
+import { forwardRef } from 'react'
 import NextLink from 'next/link'
-
 import {
 	Container,
 	Box,
@@ -16,23 +15,32 @@ import {
 	useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
+import Logo from './logos'
+import ThemeToggleButton from './theme-toggle-button'
 
-const LinkItem = ({href, path, children}) => {
-	const active = path === href
-	const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
-
-	return (
-		<NextLink href={href}>
-			<Link 
-				p={2} 
-				bg={active ? 'glassTeal' : undefined} 
-				color={active ? '#202023': inactiveColor} 
-			>
-				{children}
-			</Link>
-		</NextLink>
-	)
+const LinkItem = ({ href, path, target, children, ...props }) => {
+  const active = path === href
+  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  return (
+    <Link
+      as={NextLink}
+      href={href}
+      scroll={false}
+      p={2}
+      bg={active ? 'grassTeal' : undefined}
+      color={active ? '#202023' : inactiveColor}
+      target={target}
+      {...props}
+    >
+      {children}
+    </Link>
+  )
 }
+
+const MenuLink = forwardRef((props, ref) => (
+  <Link ref={ref} as={NextLink} {...props} />
+))
+
 
 const NavBar = props => {
 	const {path} = props
@@ -66,22 +74,20 @@ const NavBar = props => {
 					width={{base:'full', md: 'auto'}}
 					alignItems="center"
 					flexGrow = {1}
-					mt={{ base: 4, nmd: 0}}
+					mt={{base: 4, nmd: 0}}
 				>
 					<LinkItem href="/works" path={path}>
 						Works
 					</LinkItem>
 
-					<LinkItem href="/Posts" path={path}>
-						Posts
-					</LinkItem>
-					<LinkItem href="https://www.overleaf.com/read/gpmckphwbtkh" passHref>
+					<LinkItem href="https://www.overleaf.com/read/gpmckphwbtkh">
 						Resume
 					</LinkItem>
 
 				</Stack>
 
 				<Box flex={1} align="right">
+					<ThemeToggleButton />
 					<Box ml={2} display={{base: 'inline-block', md:'none'}}>
 						<Menu>
 							<MenuButton 
@@ -91,25 +97,23 @@ const NavBar = props => {
 								aria-label="Options"
 							/>
 							<MenuList>
-								<NextLink href="/" passHref>
-									<MenuItem as={Link}>About</MenuItem>
-								</NextLink>
+								<MenuItem as={MenuLink} href="/">
+									About
+								</MenuItem>
 
-								<NextLink href="/works" passHref>
-									<MenuItem as={Link}>Works</MenuItem>
-								</NextLink>
+								<MenuItem as={Link} href="/works">
+									Works
+								</MenuItem>
 
-								<NextLink href="/posts" passHref>
-									<MenuItem as={Link}>Posts</MenuItem>
-								</NextLink>
-
-								<NextLink href="https://www.overleaf.com/read/gpmckphwbtkh" passHref>
-									<MenuItem as={Link}>Resume</MenuItem>
-								</NextLink>
+								<MenuItem as={Link} href="https://www.overleaf.com/read/gpmckphwbtkh">
+									Resume
+								</MenuItem>
 							</MenuList>
 						</Menu>
 					</Box>
 				</Box>
+
+				
 			</Container>
 		</Box>
 	)
