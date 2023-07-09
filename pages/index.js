@@ -8,7 +8,8 @@ import {
 	Stack,
 	Icon,
 	Link,
-	HStack } from '@chakra-ui/react'
+	HStack,
+	SimpleGrid } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import Section from '../components/section'
@@ -20,12 +21,21 @@ import {
 	IoLogoLinkedin,
 	IoMail
 } from 'react-icons/io5'
+import { WorkCardImg, WorkCardDesc } from '../components/grid-item'
+import utaThumb from '../public/images/brown_cs.png'
+import { Global, css } from '@emotion/react'
+
 
 const Page = () => {
 	return (
 		<Layout>
-			<Container>
-				<Box borderRadius ="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} align="center">
+			<Container 
+				maxW="container.lg"
+				css={css`
+					scroll-margin-top: 80px;
+				`}
+			>
+				<Box borderRadius ="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mt={1} mb={6} align="center">
 					Hello! I&apos;m a CS Undergraduate at Brown University
 				</Box>
 
@@ -50,37 +60,90 @@ const Page = () => {
 				</Box>
 
 				<Section delay={0.1}>
-					<Heading as="h3" variant="section-title">
+					<Heading 
+						as="h3" 
+						variant="section-title" 
+						id="work" 
+						css={css`
+							scroll-margin-top: 80px;
+						`}>
 						Work
 					</Heading>
-					<Paragraph>
-						Paragraph
-					</Paragraph>
-					<Box align="center" my={4}>
-						<NextLink href="/works">
-							<Button rightIcon={<ChevronRightIcon/>} colorScheme="teal"> 
-								My Work
-							</Button>
-						</NextLink>
-					</Box>
+					<Container maxW="container.lg">
+						<SimpleGrid columns={2} gap={6}>
+							<Section>
+								<WorkCardImg id="uta" title="CS1470 UTA" thumbnail={utaThumb}/>
+							</Section>
+							<Section>
+								<WorkCardDesc id="uta" position="Undergraduate Teaching Assistant" team="Brown University CS1470/2470: Deep Learning" skills="">
+									Filler about TAing
+								</WorkCardDesc>
+							</Section>
+
+							<Section>
+								<WorkCardImg id="singh" title="Singh Lab" thumbnail={utaThumb}/>
+							</Section>
+							<Section>
+								<WorkCardDesc id="singh" position="Student Researcher" team="Singh Lab @ Brown University" skills="">
+									Filler about Research
+								</WorkCardDesc>
+							</Section>
+
+							<Section>
+								<WorkCardImg id="mahmood" title="Mahmood Lab" thumbnail={utaThumb}/>
+							</Section>
+							<Section>
+								<WorkCardDesc id="mahmood" position="Remote Research Intern" team="Mahmood Lab, Harvard Medical School" skills="">
+									Filler about Research
+								</WorkCardDesc>
+							</Section>
+						</SimpleGrid>
+					</Container>
 				</Section>
 
 				<Section delay={0.2}>
-					<Heading as="h3" variant="section-title">
-						Bio
-					</Heading>
-					<BioSection>
-						<BioYear>yyyy</BioYear> Paragraph
-					</BioSection>
-				</Section>
-
-				<Section delay={0.2}>
-					<Heading as="h3" variant="section-title">
+					<Heading 
+						as="h3" 
+						variant="section-title" 
+						id="interests" 
+						css={css`
+							scroll-margin-top: 80px;
+						`}>
 						Interests
 					</Heading>
 					<Paragraph>
 						Paragraph
 					</Paragraph>
+					<Container maxW="container.lg">
+						<SimpleGrid columns={2} gap={6}>
+							<Section>
+								<WorkCardImg id="uta" title="CS1470 UTA" thumbnail={utaThumb}/>
+							</Section>
+							<Section>
+								<WorkCardDesc id="uta" position="Undergraduate Teaching Assistant" team="Brown University CS1470/2470: Deep Learning" skills="">
+									Filler about TAing
+								</WorkCardDesc>
+							</Section>
+
+							<Section>
+								<WorkCardImg id="singh" title="Singh Lab" thumbnail={utaThumb}/>
+							</Section>
+							<Section>
+								<WorkCardDesc id="singh" position="Student Researcher" team="Singh Lab @ Brown University" skills="">
+									Filler about Research
+								</WorkCardDesc>
+							</Section>
+
+							<Section>
+								<WorkCardImg id="mahmood" title="Mahmood Lab" thumbnail={utaThumb}/>
+							</Section>
+							<Section>
+								<WorkCardDesc id="mahmood" position="Remote Research Intern" team="Mahmood Lab, Harvard Medical School" skills="">
+									Filler about Research
+								</WorkCardDesc>
+							</Section>
+						</SimpleGrid>
+					</Container>
 				</Section>				
 			</Container>
 			<Container> 

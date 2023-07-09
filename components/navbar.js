@@ -1,4 +1,4 @@
-import { forwardRef } from 'react'
+import { forwardRef, useState, useEffect } from 'react'
 import NextLink from 'next/link'
 import {
 	Container,
@@ -18,18 +18,30 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import Logo from './logos'
 import ThemeToggleButton from './theme-toggle-button'
 
-const LinkItem = ({ href, path, target, children, ...props }) => {
+const LinkItem = ({ href, router, path, target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  const [anchor, setAnchor] = useState(null);
+  
+  useEffect(() => {
+    setAnchor(document.getElementById(href));
+  }, [href]);
+
+	const scrollToAnchor = event => {
+    event.preventDefault();
+    anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+
   return (
     <Link
-      as={NextLink}
-      href={href}
-      scroll={false}
+    	as={NextLink}
+      href={`/#${href}`}
       p={2}
       bg={active ? 'grassTeal' : undefined}
       color={active ? '#202023' : inactiveColor}
       target={target}
+      onClick={scrollToAnchor}
       {...props}
     >
       {children}
@@ -42,7 +54,7 @@ const MenuLink = forwardRef((props, ref) => (
 ))
 
 
-const NavBar = props => {
+const NavBar = ({props}) => {
 	const {path} = props
 
 	return (
@@ -76,8 +88,12 @@ const NavBar = props => {
 					flexGrow = {1}
 					mt={{base: 4, nmd: 0}}
 				>
-					<LinkItem href="/works" path={path}>
-						Works
+					<LinkItem href="work" path={path}>
+						Work
+					</LinkItem>
+
+					<LinkItem href="interests" path={path}>
+						Interests
 					</LinkItem>
 
 					<LinkItem href="https://www.overleaf.com/read/gpmckphwbtkh">
@@ -101,8 +117,12 @@ const NavBar = props => {
 									About
 								</MenuItem>
 
-								<MenuItem as={Link} href="/works">
-									Works
+								<MenuItem as={Link} href="/#work">
+									Work
+								</MenuItem>
+
+								<MenuItem as={Link} href="/#interests">
+									Interests
 								</MenuItem>
 
 								<MenuItem as={Link} href="https://www.overleaf.com/read/gpmckphwbtkh">

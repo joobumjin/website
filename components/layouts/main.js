@@ -6,13 +6,13 @@ const Main = ({children, router}) => {
 	return (
 		<Box as="main" pb={8}>
 			<Head>
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="viewport" content="width=100px, initial-scale=1" />
 				<title> Bumjin Joo - Home </title>
 			</Head>
 
-			<NavBar path={router.asPath} />
+			<NavBar props={router.asPath} />
 
-			<Container maxW="container.md" pt={14}>
+			<Container maxW="container.lg" pt={14} position="relative" zIndex={0}>
 				{children}
 			</Container>
 		</Box>

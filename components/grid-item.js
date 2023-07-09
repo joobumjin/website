@@ -53,6 +53,62 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
 	</Box>
 )
 
+export const WorkCardImg = ({ children, id, title, thumbnail }) => (
+	<Box w="100%" align="center">
+		<LinkBox 
+			as = {NextLink}
+			href={`/works/${id}`}
+			cursor="pointer"
+			scroll={false}
+	        css={css`
+		        &:hover {
+		          opacity: 0.8;
+		        }
+
+		        &:hover ${title} {
+		          text-decoration: underline;
+		        }
+	        `}
+		>
+			<Image
+				src={thumbnail}
+				alt={title}
+				className="grid-item-thumbnail"
+				placeHolder="blur"
+				loading="lazy"
+			/>
+		</LinkBox>
+	</Box>
+)
+
+export const WorkCardDesc = ({ children, id, position, team, skills }) => (
+	<Box w="100%" align="left">
+		<LinkBox 
+			as = {NextLink}
+			href={`/works/${id}`}
+			cursor="pointer"
+			scroll={false}
+	        css={css`
+		        &:hover {
+		          opacity: 0.8;
+		        }
+
+		        &:hover ${position} {
+		          text-decoration: underline;
+		        }
+	        `}
+		>
+			<Text fontSize={14}>{position}</Text>
+
+			<LinkOverlay as="div" href={`/works/${id}`}>
+				<Text mt={2} fontSize={20}>{team}</Text>
+			</LinkOverlay>
+
+			<Text fontSize={14}>{children}</Text>
+		</LinkBox>
+	</Box>
+)
+
 export const GridItemStyle = () => {
 	<style jsx global> {`
 		.grid-item-thumbnail {
