@@ -50,7 +50,7 @@ const AnchorLinkItem = ({ href, path, target, children, ...props }) => {
 }
 
 /* eslint-disable react/display-name */
-const LinkItem = ({ href, router, path, target, children, ...props }) => {
+const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
   return (

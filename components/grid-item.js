@@ -81,7 +81,7 @@ export const WorkCardImg = ({ id, title, thumbnail }) => (
 	</Box>
 )
 
-export const WorkCardDesc = ({ children, id, position, team, skills }) => (
+export const WorkCardDesc = ({ id, position, team, skills }) => (
 	<Box w="100%" align="left">
 		<LinkBox 
 			as = {NextLink}

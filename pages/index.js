@@ -20,7 +20,7 @@ import {
 	IoMail
 } from 'react-icons/io5'
 import { WorkCardImg, WorkCardDesc } from '../components/grid-item'
-import { SkillCard, UTASkills } from '../components/skill'
+import { UTASkills } from '../components/skill'
 import utaThumb from '../public/images/brown_cs.png'
 import mahmoodThumb from '../public/images/mahmood_lab.png'
 import { css } from '@emotion/react'
