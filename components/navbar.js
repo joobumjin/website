@@ -18,7 +18,7 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import Logo from './logos'
 import ThemeToggleButton from './theme-toggle-button'
 
-const LinkItem = ({ href, router, path, target, children, ...props }) => {
+const AnchorLinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
   const [anchor, setAnchor] = useState(null);
@@ -42,6 +42,25 @@ const LinkItem = ({ href, router, path, target, children, ...props }) => {
       color={active ? '#202023' : inactiveColor}
       target={target}
       onClick={scrollToAnchor}
+      {...props}
+    >
+      {children}
+    </Link>
+  )
+}
+
+/* eslint-disable react/display-name */
+const LinkItem = ({ href, router, path, target, children, ...props }) => {
+  const active = path === href
+  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  return (
+    <Link
+    	as={NextLink}
+      href={href}
+      p={2}
+      bg={active ? 'grassTeal' : undefined}
+      color={active ? '#202023' : inactiveColor}
+      target={target}
       {...props}
     >
       {children}
@@ -88,13 +107,13 @@ const NavBar = ({props}) => {
 					flexGrow = {1}
 					mt={{base: 4, nmd: 0}}
 				>
-					<LinkItem href="work" path={path}>
+					<AnchorLinkItem href="work" path={path}>
 						Work
-					</LinkItem>
+					</AnchorLinkItem>
 
-					<LinkItem href="interests" path={path}>
+					<AnchorLinkItem href="interests" path={path}>
 						Interests
-					</LinkItem>
+					</AnchorLinkItem>
 
 					<LinkItem href="https://www.overleaf.com/read/gpmckphwbtkh">
 						Resume

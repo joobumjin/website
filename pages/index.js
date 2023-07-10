@@ -5,16 +5,14 @@ import {
 	Image, 
 	useColorModeValue, 
 	Button,
-	Stack,
 	Icon,
 	Link,
-	HStack,
 	SimpleGrid } from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
-import NextLink from 'next/link'
+// import { ChevronRightIcon } from '@chakra-ui/icons'
+// import NextLink from 'next/link'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bios'
+// import { BioSection, BioYear } from '../components/bios'
 import Layout from '../components/layouts/article'
 import {
 	IoLogoGithub,
@@ -22,8 +20,10 @@ import {
 	IoMail
 } from 'react-icons/io5'
 import { WorkCardImg, WorkCardDesc } from '../components/grid-item'
+import { SkillCard, UTASkills } from '../components/skill'
 import utaThumb from '../public/images/brown_cs.png'
-import { Global, css } from '@emotion/react'
+import mahmoodThumb from '../public/images/mahmood_lab.png'
+import { css } from '@emotion/react'
 
 
 const Page = () => {
@@ -75,8 +75,9 @@ const Page = () => {
 								<WorkCardImg id="uta" title="CS1470 UTA" thumbnail={utaThumb}/>
 							</Section>
 							<Section>
-								<WorkCardDesc id="uta" position="Undergraduate Teaching Assistant" team="Brown University CS1470/2470: Deep Learning" skills="">
-									Filler about TAing
+								<WorkCardDesc id="uta" position="Undergraduate Teaching Assistant" team="Brown University CS1470/2470: Deep Learning" 
+									skills=<UTASkills/>
+								>
 								</WorkCardDesc>
 							</Section>
 
@@ -90,7 +91,7 @@ const Page = () => {
 							</Section>
 
 							<Section>
-								<WorkCardImg id="mahmood" title="Mahmood Lab" thumbnail={utaThumb}/>
+								<WorkCardImg id="mahmood" title="Mahmood Lab" thumbnail={mahmoodThumb}/>
 							</Section>
 							<Section>
 								<WorkCardDesc id="mahmood" position="Remote Research Intern" team="Mahmood Lab, Harvard Medical School" skills="">
@@ -114,36 +115,21 @@ const Page = () => {
 					<Paragraph>
 						Paragraph
 					</Paragraph>
-					<Container maxW="container.lg">
-						<SimpleGrid columns={2} gap={6}>
-							<Section>
-								<WorkCardImg id="uta" title="CS1470 UTA" thumbnail={utaThumb}/>
-							</Section>
-							<Section>
-								<WorkCardDesc id="uta" position="Undergraduate Teaching Assistant" team="Brown University CS1470/2470: Deep Learning" skills="">
-									Filler about TAing
-								</WorkCardDesc>
-							</Section>
+				</Section>	
 
-							<Section>
-								<WorkCardImg id="singh" title="Singh Lab" thumbnail={utaThumb}/>
-							</Section>
-							<Section>
-								<WorkCardDesc id="singh" position="Student Researcher" team="Singh Lab @ Brown University" skills="">
-									Filler about Research
-								</WorkCardDesc>
-							</Section>
-
-							<Section>
-								<WorkCardImg id="mahmood" title="Mahmood Lab" thumbnail={utaThumb}/>
-							</Section>
-							<Section>
-								<WorkCardDesc id="mahmood" position="Remote Research Intern" team="Mahmood Lab, Harvard Medical School" skills="">
-									Filler about Research
-								</WorkCardDesc>
-							</Section>
-						</SimpleGrid>
-					</Container>
+				<Section delay={0.2}>
+					<Heading 
+						as="h3" 
+						variant="section-title" 
+						id="interests" 
+						css={css`
+							scroll-margin-top: 80px;
+						`}>
+						Skills
+					</Heading>
+					<Paragraph>
+						Paragraph
+					</Paragraph>
 				</Section>				
 			</Container>
 			<Container> 

@@ -6,7 +6,7 @@ const NotFound = () => {
 		<Container>
 			<Heading as="h1"> Not Found </Heading>
 			<Text> The page you requested could not be found </Text>
-			<Divider my={6}>
+			<Divider my={6} />
 
 			<Box my={6} align="center">
 				<NextLink href="/">
