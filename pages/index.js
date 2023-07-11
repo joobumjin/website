@@ -20,7 +20,7 @@ import {
 	IoMail
 } from 'react-icons/io5'
 import { WorkCardImg, WorkCardDesc } from '../components/grid-item'
-import { UTASkills } from '../components/skill'
+import { UTASkills, SinghSkills, SkillDesc } from '../components/skill'
 import utaThumb from '../public/images/brown_cs.png'
 import mahmoodThumb from '../public/images/mahmood_lab.png'
 import { css } from '@emotion/react'
@@ -93,7 +93,7 @@ const Page = () => {
 									id="singh" 
 									position="Student Researcher" 
 									team="Singh Lab @ Brown University" 
-									skills=<UTASkills/>
+									skills=<SinghSkills/>
 								>
 								</WorkCardDesc>
 							</Section>
@@ -114,20 +114,21 @@ const Page = () => {
 					</Container>
 				</Section>
 
-				<Section delay={0.2}>
+				{/*<Section delay={0.2}>
 					<Heading 
 						as="h3" 
 						variant="section-title" 
 						id="interests" 
 						css={css`
 							scroll-margin-top: 80px;
-						`}>
+						`}
+					>
 						Interests
 					</Heading>
 					<Paragraph>
 						Paragraph
 					</Paragraph>
-				</Section>	
+				</Section>	*/}
 
 				<Section delay={0.2}>
 					<Heading 
@@ -136,12 +137,15 @@ const Page = () => {
 						id="skills" 
 						css={css`
 							scroll-margin-top: 80px;
-						`}>
+						`}
+					>
 						Skills
 					</Heading>
-					<Paragraph>
-						Paragraph
-					</Paragraph>
+					<Container maxW="container.lg">
+						<SkillDesc title="Machine Learning">
+							Familiar with most widely used machine learning frameworks like Tensorflow, Keras, and PyTorch.
+						</SkillDesc>
+					</Container>
 				</Section>				
 			</Container>
 			<Container> 
