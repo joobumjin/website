@@ -66,11 +66,12 @@ const Page = () => {
 						id="work" 
 						css={css`
 							scroll-margin-top: 80px;
-						`}>
+						`}
+					>
 						Work
 					</Heading>
 					<Container maxW="container.lg">
-						<SimpleGrid columns={2} spacingX="40px" spacingY="20px">
+						<SimpleGrid columns={{base:1, md:2}} spacingX="40px" spacingY="20px">
 							<Section>
 								<WorkCardImg id="uta" title="CS1470 UTA" thumbnail={utaThumb}/>
 							</Section>

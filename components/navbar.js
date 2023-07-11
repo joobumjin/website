@@ -121,6 +121,14 @@ const NavBar = ({props}) => {
 									Interests
 								</MenuItem>
 
+								<MenuItem as={Link} href="/#skills">
+									Skills
+								</MenuItem>
+
+								<MenuItem as={Link} href="/#contact">
+									Contact
+								</MenuItem>
+
 								<MenuItem as={Link} href="https://www.overleaf.com/read/gpmckphwbtkh">
 									Resume
 								</MenuItem>
