@@ -1,4 +1,4 @@
-import { forwardRef, useState, useEffect } from 'react'
+import { forwardRef } from 'react'
 import NextLink from 'next/link'
 import {
 	Container,
