@@ -70,12 +70,15 @@ const Page = () => {
 						Work
 					</Heading>
 					<Container maxW="container.lg">
-						<SimpleGrid columns={2} gap={6}>
+						<SimpleGrid columns={2} spacingX="40px" spacingY="20px">
 							<Section>
 								<WorkCardImg id="uta" title="CS1470 UTA" thumbnail={utaThumb}/>
 							</Section>
 							<Section>
-								<WorkCardDesc id="uta" position="Undergraduate Teaching Assistant" team="Brown University CS1470/2470: Deep Learning" 
+								<WorkCardDesc 
+									id="uta" 
+									position="Undergraduate Teaching Assistant" 
+									team="Brown University CS1470/2470: Deep Learning" 
 									skills=<UTASkills/>
 								>
 								</WorkCardDesc>
@@ -85,8 +88,12 @@ const Page = () => {
 								<WorkCardImg id="singh" title="Singh Lab" thumbnail={utaThumb}/>
 							</Section>
 							<Section>
-								<WorkCardDesc id="singh" position="Student Researcher" team="Singh Lab @ Brown University" skills="">
-									Filler about Research
+								<WorkCardDesc 
+									id="singh" 
+									position="Student Researcher" 
+									team="Singh Lab @ Brown University" 
+									skills=<UTASkills/>
+								>
 								</WorkCardDesc>
 							</Section>
 
@@ -94,8 +101,12 @@ const Page = () => {
 								<WorkCardImg id="mahmood" title="Mahmood Lab" thumbnail={mahmoodThumb}/>
 							</Section>
 							<Section>
-								<WorkCardDesc id="mahmood" position="Remote Research Intern" team="Mahmood Lab, Harvard Medical School" skills="">
-									Filler about Research
+								<WorkCardDesc 
+									id="mahmood" 
+									position="Remote Research Intern" 
+									team="Mahmood Lab, Harvard Medical School" 
+									skills=<UTASkills/>
+								>
 								</WorkCardDesc>
 							</Section>
 						</SimpleGrid>
@@ -121,7 +132,7 @@ const Page = () => {
 					<Heading 
 						as="h3" 
 						variant="section-title" 
-						id="interests" 
+						id="skills" 
 						css={css`
 							scroll-margin-top: 80px;
 						`}>
@@ -133,7 +144,10 @@ const Page = () => {
 				</Section>				
 			</Container>
 			<Container> 
-				<Box align="center">
+				<Box 
+					align="center"
+					id="contact"
+				>
 					<Link href="https://github.com/joobumjin">
 						<Button 
 							variant="ghost" 

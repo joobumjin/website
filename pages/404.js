@@ -5,12 +5,12 @@ const NotFound = () => {
 	return (
 		<Container>
 			<Heading as="h1"> Not Found </Heading>
-			<Text> The page you requested could not be found </Text>
+			<Text mt={3}> The page you requested could not be found </Text>
 			<Divider my={6} />
 
 			<Box my={6} align="center">
 				<NextLink href="/">
-					<Button colorScheme="teal">Return to Home</Button> 
+					<Button>Return to Home</Button> 
 				</NextLink>
 			</Box>
 		</Container>

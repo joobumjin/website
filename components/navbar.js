@@ -18,37 +18,6 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import Logo from './logos'
 import ThemeToggleButton from './theme-toggle-button'
 
-const AnchorLinkItem = ({ href, path, target, children, ...props }) => {
-  const active = path === href
-  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
-  const [anchor, setAnchor] = useState(null);
-  
-  useEffect(() => {
-    setAnchor(document.getElementById(href));
-  }, [href]);
-
-	const scrollToAnchor = event => {
-    event.preventDefault();
-    anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
-
-  return (
-    <Link
-    	as={NextLink}
-      href={`/#${href}`}
-      p={2}
-      bg={active ? 'grassTeal' : undefined}
-      color={active ? '#202023' : inactiveColor}
-      target={target}
-      onClick={scrollToAnchor}
-      {...props}
-    >
-      {children}
-    </Link>
-  )
-}
-
 /* eslint-disable react/display-name */
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
@@ -71,7 +40,6 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 const MenuLink = forwardRef((props, ref) => (
   <Link ref={ref} as={NextLink} {...props} />
 ))
-
 
 const NavBar = ({props}) => {
 	const {path} = props
@@ -107,13 +75,26 @@ const NavBar = ({props}) => {
 					flexGrow = {1}
 					mt={{base: 4, nmd: 0}}
 				>
-					<AnchorLinkItem href="work" path={path}>
+					{/*<AnchorLinkItem href="work" path={path}>
 						Work
-					</AnchorLinkItem>
+					</AnchorLinkItem>*/}
 
-					<AnchorLinkItem href="interests" path={path}>
+					<LinkItem href="/#work">
+						Work
+					</LinkItem>
+
+
+					<LinkItem href="/#interests">
 						Interests
-					</AnchorLinkItem>
+					</LinkItem>
+
+					<LinkItem href="/#skills">
+						Skills
+					</LinkItem>
+
+					<LinkItem href="/#contact">
+						Contact
+					</LinkItem>
 
 					<LinkItem href="https://www.overleaf.com/read/gpmckphwbtkh">
 						Resume
@@ -133,7 +114,7 @@ const NavBar = ({props}) => {
 							/>
 							<MenuList>
 								<MenuItem as={MenuLink} href="/">
-									About
+									Home
 								</MenuItem>
 
 								<MenuItem as={Link} href="/#work">

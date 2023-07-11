@@ -1,7 +1,8 @@
 import NextLink from 'next/link'
 import Image from 'next/image'
-import { Box, Text, LinkBox, LinkOverlay, Button } from '@chakra-ui/react'
+import { Grid, Box, Text, LinkBox, LinkOverlay, Button, Center } from '@chakra-ui/react'
 import { css } from '@emotion/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
 export const GridItem = ({ children, title, thumbnail }) => (
 	<Box w="100%" align="center">
@@ -54,62 +55,87 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
 )
 
 export const WorkCardImg = ({ id, title, thumbnail }) => (
-	<Box w="100%" align="center">
-		<LinkBox 
-			as = {NextLink}
-			href={`/works/${id}`}
-			cursor="pointer"
-			scroll={false}
-	        css={css`
-		        &:hover {
-		          opacity: 0.8;
-		        }
+	<Box 
+		w="100%" 
+		h="250px" 
+		align="center"  
+		bg="white" 
+		rounded="lg" 
+		overflow="hidden"
+	>
+		<Center h="100%">
+			<LinkBox 
+				as = {NextLink}
+				href={`/works/${id}`}
+				cursor="pointer"
+				scroll={false}
+		        css={css`
+			        &:hover {
+			          opacity: 0.8;
+			        }
 
-		        &:hover ${title} {
-		          text-decoration: underline;
-		        }
-	        `}
-		>
-			<Image
-				src={thumbnail}
-				alt={title}
-				className="grid-item-thumbnail"
-				placeHolder="blur"
-				loading="lazy"
-			/>
-		</LinkBox>
+			        &:hover ${title} {
+			          text-decoration: underline;
+			        }
+		        `}
+			>
+				<Image
+					src={thumbnail}
+					alt={title}
+					className="grid-item-thumbnail"
+					placeHolder="blur"
+					loading="lazy"
+				/>
+			</LinkBox>
+		</Center>
 	</Box>
 )
 
 export const WorkCardDesc = ({ id, position, team, skills }) => (
-	<Box w="100%" align="left">
-		<LinkBox 
-			as = {NextLink}
-			href={`/works/${id}`}
-			cursor="pointer"
-			scroll={false}
-	        css={css`
-		        &:hover {
-		          opacity: 0.8;
-		        }
-
-		        &:hover ${position} {
-		          text-decoration: underline;
-		        }
-	        `}
+	<Box w="100%" h="250px" align="left">
+		<Grid 
+			h="100%"
+			templateAreas={`'desc'
+							'more'`}
+			gridTemplateRows={"5fr 1fr "}
 		>
-			<Text fontSize={14}>{position}</Text>
+			<Box
+				gridArea="desc"
+			>
+				<LinkBox 
+					as = {NextLink}
+					href={`/works/${id}`}
+					cursor="pointer"
+					scroll={false}
+			        css={css`
+				        &:hover {
+				          opacity: 0.8;
+				        }
 
-			<LinkOverlay as="div" href={`/works/${id}`}>
-				<Text mt={2} fontSize={20}>{team}</Text>
-			</LinkOverlay>
-		</LinkBox>
+				        &:hover ${position} {
+				          text-decoration: underline;
+				        }
+			        `}
+				>
+					<Text fontSize={14}>{position}</Text>
 
-		{skills}
+					<LinkOverlay as="div" href={`/works/${id}`}>
+						<Text mt={2} fontSize={20}>{team}</Text>
+					</LinkOverlay>
+				</LinkBox>
 
-		<Button mt={2}>
+				{skills}
+			</Box>
 
-		</Button>
+			<NextLink 
+				href={`/works/${id}`}
+				gridArea="more">
+				<Button mt={2}>
+					Learn More<ChevronRightIcon />
+				</Button>
+			</NextLink>
+
+		</Grid>
 	</Box>
 )
 

@@ -1,4 +1,4 @@
-import { Tag, TagLabel, HStack } from '@chakra-ui/react'
+import { Tag, TagLabel, Stack } from '@chakra-ui/react'
 
 export const SkillCard = ({color, children}) => {
 	return (
@@ -15,9 +15,10 @@ export const SkillCard = ({color, children}) => {
 
 export const UTASkills = () => {
 	return (
-		<HStack mt={2}>
+		<Stack direction={['column', 'row']} mt={2}>
 			<SkillCard color="orange"> Tensorflow </SkillCard>
 			<SkillCard color="red"> PyTorch </SkillCard>
-		</HStack>
+			<SkillCard color="blue"> Git </SkillCard>
+		</Stack>
 	)
 }

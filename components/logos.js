@@ -27,7 +27,7 @@ const Logo = () => {
 	return (
 		<Link 
 			href = "/"
-			onClick={handleClick}
+			// onClick={handleClick}
 		>
 			<LogoBox>
 				<Image src={logoImg} width={20} height={20} alt="logo"/>
