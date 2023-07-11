@@ -75,10 +75,6 @@ const NavBar = ({props}) => {
 					flexGrow = {1}
 					mt={{base: 4, nmd: 0}}
 				>
-					{/*<AnchorLinkItem href="work" path={path}>
-						Work
-					</AnchorLinkItem>*/}
-
 					<LinkItem href="/#work">
 						Work
 					</LinkItem>
