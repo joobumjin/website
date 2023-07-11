@@ -11,7 +11,7 @@ import {
 // import { ChevronRightIcon } from '@chakra-ui/icons'
 // import NextLink from 'next/link'
 import Section from '../components/section'
-import Paragraph from '../components/paragraph'
+// import Paragraph from '../components/paragraph'
 // import { BioSection, BioYear } from '../components/bios'
 import Layout from '../components/layouts/article'
 import {
