@@ -1,4 +1,5 @@
-import { Heading, Stack } from '@chakra-ui/react'
+import { Heading, Stack, Container } from '@chakra-ui/react'
+import { css } from '@emotion/react'
 
 export const SectionHeader = ({id, children}) => {
 	return (
@@ -20,5 +21,20 @@ export const SideBar = ({children}) => {
 				{children}
 			</Stack>
 		</div>
+	)
+}
+
+export const WorkContent = ({children}) => {
+	return (
+		<Container 
+			maxW={{base: '100%', md: '80%'}}
+			ml={{base: '0%', md: '20%'}}
+			mt={{base: 5, md: -20}}
+			css={css`
+				scroll-margin-top: 80px;
+			`}
+		>
+			{children}
+		</Container>
 	)
 }

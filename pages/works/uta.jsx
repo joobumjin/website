@@ -18,7 +18,7 @@ import utaThumb from '../../public/images/brown_cs.png'
 import { css } from '@emotion/react'
 import NextLink from 'next/link'
 import Image from 'next/image'
-import { SectionHeader, SideBar } from '../../components/work_util'
+import { SectionHeader, SideBar, WorkContent } from '../../components/work_util'
 
 /* eslint-disable react/display-name */
 const LinkItem = ({ href, path, target, children, ...props }) => {
@@ -48,14 +48,7 @@ const Page = () => {
 				<LinkItem href={`/works/uta/#overview`}> Overview </LinkItem>
 			</SideBar>
 
-			<Container 
-				maxW={{base: '100%', md: '80%'}}
-				ml={{base: '0%', md: '20%'}}
-				mt={{base: 5, md: -20}}
-				css={css`
-					scroll-margin-top: 80px;
-				`}
-			>
+			<WorkContent>
 				<Heading as="h2" variant="page-title" id="summary">
 					CSCI 1470 / 2470: (Graduate) Deep Learning
 
@@ -117,7 +110,7 @@ const Page = () => {
 					Overview
 				</SectionHeader>
 
-			</Container>
+			</WorkContent>
 		</Layout>
 	)
 }
