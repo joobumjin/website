@@ -1,5 +1,34 @@
-import { Heading, Stack, Container } from '@chakra-ui/react'
+import { 
+	Heading, 
+	Stack, 
+	Container, 
+	Center, 
+	Box, 
+	Text, 
+	Link,
+	useColorModeValue } from '@chakra-ui/react'
+import Image from 'next/image'
+import NextLink from 'next/link'
 import { css } from '@emotion/react'
+
+/* eslint-disable react/display-name */
+export const LinkItem = ({ href, path, target, children, ...props }) => {
+  const active = path === href
+  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  return (
+    <Link
+    	as={NextLink}
+    	href={href}
+    	p={2}
+    	bg={active ? 'grassTeal' : undefined}
+    	color={active ? '#202023' : inactiveColor}
+    	target={target}
+    	{...props}
+    >
+      {children}
+    </Link>
+  )
+}
 
 export const SectionHeader = ({id, children}) => {
 	return (
@@ -24,7 +53,7 @@ export const SideBar = ({children}) => {
 	)
 }
 
-export const WorkContent = ({children}) => {
+export const WorkContent = ({title, role, img, children}) => {
 	return (
 		<Container 
 			maxW={{base: '100%', md: '80%'}}
@@ -34,6 +63,35 @@ export const WorkContent = ({children}) => {
 				scroll-margin-top: 80px;
 			`}
 		>
+			<Heading as="h2" variant="page-title" id="summary">
+				{title}
+			</Heading>
+
+			<Text mb={10}>
+				{role}
+			</Text>
+
+			<Center w="100%">
+				<Box 
+					w="750px" 
+					h="500px" 
+					align="center"  
+					bg="white" 
+					rounded="lg" 
+					overflow="hidden"
+					mb={6}
+				>
+					<Center w="100%" h="100%">
+						<Image
+							src={img}
+							alt="CS 1470 UTA"
+							placeHolder="blur"
+							loading="lazy"
+						/>
+					</Center>
+				</Box>
+			</Center>
+
 			{children}
 		</Container>
 	)

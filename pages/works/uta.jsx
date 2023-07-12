@@ -10,33 +10,14 @@ import {
 // import { ChevronRightIcon } from '@chakra-ui/icons'
 // import NextLink from 'next/link'
 import Section from '../../components/section'
-// import Paragraph from '../components/paragraph'
+import Paragraph from '../../components/paragraph'
 // import { BioSection, BioYear } from '../components/bios'
 import Layout from '../../components/layouts/article'
 import { UTASkills } from '../../components/skill'
 import utaThumb from '../../public/images/brown_cs.png'
 import NextLink from 'next/link'
 import Image from 'next/image'
-import { SectionHeader, SideBar, WorkContent } from '../../components/work_util'
-
-/* eslint-disable react/display-name */
-const LinkItem = ({ href, path, target, children, ...props }) => {
-  const active = path === href
-  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
-  return (
-    <Link
-    	as={NextLink}
-    	href={href}
-    	p={2}
-    	bg={active ? 'grassTeal' : undefined}
-    	color={active ? '#202023' : inactiveColor}
-    	target={target}
-    	{...props}
-    >
-      {children}
-    </Link>
-  )
-}
+import { SectionHeader, SideBar, WorkContent, LinkItem } from '../../components/work_util'
 
 
 const Page = () => {
@@ -47,36 +28,11 @@ const Page = () => {
 				<LinkItem href={`/works/uta/#overview`}> Overview </LinkItem>
 			</SideBar>
 
-			<WorkContent>
-				<Heading as="h2" variant="page-title" id="summary">
-					CSCI 1470 / 2470: (Graduate) Deep Learning
-
-				</Heading>
-				<Text mb={10}>
-					Undergraduate Teaching Assistant at Brown University
-				</Text>
-
-				<Center w="100%">
-					<Box 
-						w="750px" 
-						h="500px" 
-						align="center"  
-						bg="white" 
-						rounded="lg" 
-						overflow="hidden"
-						mb={6}
-					>
-						<Center w="100%" h="100%">
-							<Image
-								src={utaThumb}
-								alt="CS 1470 UTA"
-								placeHolder="blur"
-								loading="lazy"
-							/>
-						</Center>
-					</Box>
-				</Center>
-
+			<WorkContent 
+				title="CSCI 1470 / 2470: (Graduate) Deep Learning"
+				role="Undergraduate Teaching Assistant at Brown University"
+				img={utaThumb}
+			>
 				<Container maxW="container.lg">
 					<SimpleGrid columns={{base:1, md:2}} spacingX="40px" spacingY="5px">
 						<Section>
@@ -96,6 +52,9 @@ const Page = () => {
 
 						<Section>
 							<Text fontSize="20" as='b'> Skills </Text>
+							<Text>
+								MLE, SWE, Version Control,
+							</Text>
 						</Section>
 
 						<Section>
@@ -108,6 +67,18 @@ const Page = () => {
 				<SectionHeader id="overview">
 					Overview
 				</SectionHeader>
+
+				<Paragraph>
+					As a staff member of Brown CS's Deep Learning course, I had two main roles: Undergraduate TA and Course Developer.
+
+					Developed course materials and assignments for over 200 students including written conceptual questions, interactive Notebook coding problems, and full Deep Learning model assignments.
+
+					Debugged course code based on student reports and deployed bug fixes during the course.
+
+					Participated in weekly staff discussions covering student progress, presenting on upcoming projects, and implementing changes to improve course quality.
+
+					Taught lab sections and answered student questions regarding undergraduate & graduate course material, student code bugs, and problems in lab assignments
+				</Paragraph>
 
 			</WorkContent>
 		</Layout>
