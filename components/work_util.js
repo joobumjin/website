@@ -62,6 +62,7 @@ export const WorkContent = ({title, role, img, children}) => {
 			css={css`
 				scroll-margin-top: 80px;
 			`}
+			mb={6}
 		>
 			<Heading as="h2" variant="page-title" id="summary">
 				{title}
