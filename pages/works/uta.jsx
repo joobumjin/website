@@ -3,14 +3,10 @@ import {
 	Box, 
 	Heading, 
 	useColorModeValue, 
-	Button,
-	Icon,
 	Link,
-	Grid,
 	SimpleGrid,
 	Text,
 	Center,
-	LinkBox,
 	Stack } from '@chakra-ui/react'
 // import { ChevronRightIcon } from '@chakra-ui/icons'
 // import NextLink from 'next/link'
@@ -18,18 +14,12 @@ import Section from '../../components/section'
 // import Paragraph from '../components/paragraph'
 // import { BioSection, BioYear } from '../components/bios'
 import Layout from '../../components/layouts/article'
-import {
-	IoLogoGithub,
-	IoLogoLinkedin,
-	IoMail
-} from 'react-icons/io5'
-import { WorkCardImg, WorkCardDesc } from '../../components/grid-item'
-import { UTASkills, SinghSkills, SkillDesc } from '../../components/skill'
+import { UTASkills } from '../../components/skill'
 import utaThumb from '../../public/images/brown_cs.png'
-import mahmoodThumb from '../../public/images/mahmood_lab.png'
 import { css } from '@emotion/react'
 import NextLink from 'next/link'
 import Image from 'next/image'
+import { SectionHeader, SideBar } from '../../components/work_util'
 
 /* eslint-disable react/display-name */
 const LinkItem = ({ href, path, target, children, ...props }) => {
@@ -48,29 +38,6 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       {children}
     </Link>
   )
-}
-
-const SectionHeader = ({id, children}) => {
-	return (
-		<Heading as="h2" variant="page-title" id={id}>
-			{children}
-		</Heading>
-	)
-}
-
-const SideBar = ({children}) => {
-	return (
-		<div class="sidebar">
-			<Stack 
-				direction={'column'}
-				display={{base: 'none', md: 'flex'}}
-				alignItems="left"
-				mt={6}
-			> 
-				{children}
-			</Stack>
-		</div>
-	)
 }
 
 
@@ -142,6 +109,7 @@ const Page = () => {
 
 						<Section>
 							<Text fontSize="20" as='b'> Tools </Text>
+							<UTASkills/>
 						</Section>
 					</SimpleGrid>
 				</Container>

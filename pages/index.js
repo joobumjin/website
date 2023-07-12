@@ -14,11 +14,6 @@ import Section from '../components/section'
 // import Paragraph from '../components/paragraph'
 // import { BioSection, BioYear } from '../components/bios'
 import Layout from '../components/layouts/article'
-import {
-	IoLogoGithub,
-	IoLogoLinkedin,
-	IoMail
-} from 'react-icons/io5'
 import { WorkCardImg, WorkCardDesc } from '../components/grid-item'
 import { UTASkills, SinghSkills, SkillDesc } from '../components/skill'
 import utaThumb from '../public/images/brown_cs.png'
@@ -131,36 +126,6 @@ const Page = () => {
 						</SkillDesc>
 					</Container>
 				</Section>				
-			</Container>
-			<Container> 
-				<Box 
-					align="center"
-					id="contact"
-				>
-					<Link href="https://github.com/joobumjin">
-						<Button 
-							variant="ghost" 
-							colorScheme="teal"
-							leftIcon = {<Icon as={IoLogoGithub} boxSize="24px"/>}
-						/>
-					</Link>
-
-					<Link href="https://www.linkedin.com/in/bumjin-joo/">
-						<Button 
-							variant="ghost" 
-							colorScheme="teal"
-							leftIcon = {<Icon as={IoLogoLinkedin} boxSize="24px"/>}
-						/>
-					</Link>
-
-					<Link href="mailto:bumjin.joo@gmail.com">
-						<Button 
-							variant="ghost" 
-							colorScheme="teal"
-							leftIcon = {<Icon as={IoMail} boxSize="24px"/>}
-						/>
-					</Link>
-				</Box>
 			</Container>
 		</Layout>
 	)
