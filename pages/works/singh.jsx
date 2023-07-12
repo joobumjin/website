@@ -15,7 +15,7 @@ const Page = () => {
 				role="Student Researcher"
 				img={utaThumb}
 			>
-				<Text> Work In Progress </Text>
+				<SectionHeader> Work In Progress </SectionHeader>
 			</WorkContent>
 		</Layout>
 	)

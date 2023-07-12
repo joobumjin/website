@@ -1,22 +1,16 @@
 import { 
 	Container, 
-	Box, 
-	Heading, 
-	useColorModeValue, 
 	Link,
 	SimpleGrid,
 	Text,
 	Center } from '@chakra-ui/react'
 // import { ChevronRightIcon } from '@chakra-ui/icons'
-// import NextLink from 'next/link'
 import Section from '../../components/section'
 import Paragraph from '../../components/paragraph'
 // import { BioSection, BioYear } from '../components/bios'
 import Layout from '../../components/layouts/article'
 import { UTASkills } from '../../components/skill'
 import utaThumb from '../../public/images/brown_cs.png'
-import NextLink from 'next/link'
-import Image from 'next/image'
 import { SectionHeader, SideBar, WorkContent, LinkItem } from '../../components/work_util'
 
 
@@ -69,7 +63,7 @@ const Page = () => {
 				</SectionHeader>
 
 				<Paragraph>
-					As a staff member of Brown CS's Deep Learning course, I had two main roles: Undergraduate TA and Course Developer.
+					As a staff member of the Brown CS&apos; Deep Learning course, I had two main roles: Undergraduate TA and Course Developer.
 
 					Developed course materials and assignments for over 200 students including written conceptual questions, interactive Notebook coding problems, and full Deep Learning model assignments.
 
