@@ -1,4 +1,4 @@
-import { Tag, TagLabel, Stack, Box, Heading, Text, Divider } from '@chakra-ui/react'
+import { Tag, TagLabel, Stack, Box, Heading, Text, Divider, Wrap } from '@chakra-ui/react'
 
 export const SkillCard = ({color, children}) => {
 	return (
@@ -8,30 +8,30 @@ export const SkillCard = ({color, children}) => {
 			colorScheme={color}
 			borderRadius="full"
 		>
-			<TagLabel>{children}</TagLabel>
+			<TagLabel w="flex">{children}</TagLabel>
 		</Tag>
 	)
 }
 
 export const UTASkills = () => {
 	return (
-		<Stack direction={['column', 'row']} mt={2}>
+		<Wrap>
 			<SkillCard color="orange"> Tensorflow </SkillCard>
 			<SkillCard color="red"> Keras </SkillCard>
 			<SkillCard color="red"> PyTorch </SkillCard>
 			<SkillCard color="blue"> Git </SkillCard>
-		</Stack>
+		</Wrap>
 	)
 }
 
 export const SinghSkills = () => {
 	return (
-		<Stack direction={['column', 'row']} mt={2}>
+		<Wrap>
 			<SkillCard color="orange"> Tensorflow </SkillCard>
 			<SkillCard color="red"> PyTorch </SkillCard>
 			<SkillCard color="red"> Jupyter </SkillCard>
 			<SkillCard color="blue"> Git </SkillCard>
-		</Stack>
+		</Wrap>
 	)
 }
 
