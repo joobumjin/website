@@ -20,7 +20,7 @@ import { css } from '@emotion/react'
 
 const Page = () => {
 	return (
-		<Layout>
+		<Layout title="Home">
 			<Container 
 				maxW="container.lg"
 				css={css`

@@ -5,7 +5,7 @@ import { SectionHeader, SideBar, WorkContent, LinkItem } from '../../components/
 
 const Page = () => {
 	return (
-		<Layout>
+		<Layout title="Mahmood">
 			<SideBar> 
 				<LinkItem href={`/works/mahmood`}> Home </LinkItem>
 			</SideBar>

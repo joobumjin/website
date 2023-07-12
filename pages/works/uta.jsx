@@ -14,7 +14,7 @@ import { SectionHeader, SideBar, WorkContent, LinkItem } from '../../components/
 
 const Page = () => {
 	return (
-		<Layout>			
+		<Layout title="UTA">			
 			<SideBar> 
 				<LinkItem href={`/works/uta`}> Home </LinkItem>
 				<LinkItem href={`/works/uta/#overview`}> Overview </LinkItem>

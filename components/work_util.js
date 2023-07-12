@@ -56,8 +56,9 @@ export const SideBar = ({children}) => {
 export const WorkContent = ({title, role, img, children}) => {
 	return (
 		<Container 
-			maxW={{base: '100%', md: '80%'}}
-			ml={{base: '0%', md: '20%'}}
+			maxW={{base: '100%', md: '70%'}}
+			ml={{base: '0%', md: '15%'}}
+			mr={{base: '0%', md: '15%'}}
 			mt={{base: 5, md: -20}}
 			css={css`
 				scroll-margin-top: 80px;
