@@ -4,9 +4,6 @@ import {
 	Heading, 
 	Image, 
 	useColorModeValue, 
-	Button,
-	Icon,
-	Link,
 	SimpleGrid } from '@chakra-ui/react'
 // import { ChevronRightIcon } from '@chakra-ui/icons'
 // import NextLink from 'next/link'
