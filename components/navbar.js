@@ -79,11 +79,6 @@ const NavBar = ({props}) => {
 						Work
 					</LinkItem>
 
-
-					{/*<LinkItem href="/#interests" path={path}>
-						Interests
-					</LinkItem>*/}
-
 					<LinkItem href="/#skills" path={path}>
 						Skills
 					</LinkItem>
@@ -116,11 +111,7 @@ const NavBar = ({props}) => {
 								<MenuItem as={Link} href="/#work">
 									Work
 								</MenuItem>
-
-								{/*<MenuItem as={Link} href="/#interests">
-									Interests
-								</MenuItem>*/}
-
+								
 								<MenuItem as={Link} href="/#skills">
 									Skills
 								</MenuItem>

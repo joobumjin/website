@@ -114,22 +114,6 @@ const Page = () => {
 					</Container>
 				</Section>
 
-				{/*<Section delay={0.2}>
-					<Heading 
-						as="h3" 
-						variant="section-title" 
-						id="interests" 
-						css={css`
-							scroll-margin-top: 80px;
-						`}
-					>
-						Interests
-					</Heading>
-					<Paragraph>
-						Paragraph
-					</Paragraph>
-				</Section>	*/}
-
 				<Section delay={0.2}>
 					<Heading 
 						as="h3" 
