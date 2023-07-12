@@ -1,9 +1,7 @@
 import { 
 	Container, 
-	Link,
 	SimpleGrid,
-	Text,
-	Center } from '@chakra-ui/react'
+	Text} from '@chakra-ui/react'
 // import { ChevronRightIcon } from '@chakra-ui/icons'
 import Section from '../../components/section'
 import Paragraph from '../../components/paragraph'

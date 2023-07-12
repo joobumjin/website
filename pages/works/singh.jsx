@@ -16,6 +16,7 @@ const Page = () => {
 				img={utaThumb}
 			>
 				<SectionHeader> Work In Progress </SectionHeader>
+				<Text> Coming Soon </Text>
 			</WorkContent>
 		</Layout>
 	)
