@@ -1,3 +1,9 @@
+/* 
+	SOURCES: 
+	https://chakra-ui.com/docs/components/menu/theming 
+	https://github.com/chakra-ui/chakra-ui/discussions/5326
+*/
+
 import { 
 	createMultiStyleConfigHelpers, 
 	defineStyle } from '@chakra-ui/react' // eslint-disable-line
