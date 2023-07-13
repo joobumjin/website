@@ -9,10 +9,20 @@ const { definePartsStyle, defineMultiStyleConfig } =
 
 const baseStyle = definePartsStyle({
 	list: {
-		bg: mode('#202023', '#ffffff')
+		_dark: {
+			'--menu-bg': '#202023',
+		},
+		_light: {
+			'--menu-bg': '#ffffff',
+		}
 	},
   item: {
-  	bg: mode('#202023', '#ffffff')
+  	dark: {
+  		'--menu-bg': '#202023',
+  	},
+  	_light: {
+  		'--menu-bg': '#ffffff',
+  	},
 	}
 })
 
