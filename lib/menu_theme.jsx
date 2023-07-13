@@ -2,7 +2,6 @@ import {
 	createMultiStyleConfigHelpers, 
 	defineStyle } from '@chakra-ui/react' // eslint-disable-line
 import { menuAnatomy } from '@chakra-ui/anatomy'
-import { mode } from '@chakra-ui/theme-tools'
 
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(menuAnatomy.keys)
