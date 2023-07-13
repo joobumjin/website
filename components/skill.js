@@ -16,10 +16,14 @@ export const SkillCard = ({color, children}) => {
 export const UTASkills = () => {
 	return (
 		<Wrap>
-			<SkillCard color="orange"> Tensorflow </SkillCard>
+			<SkillCard color="orange"> Python </SkillCard>
+			<SkillCard color="red"> Tensorflow </SkillCard>
 			<SkillCard color="red"> Keras </SkillCard>
 			<SkillCard color="red"> PyTorch </SkillCard>
+			<SkillCard color="red"> Jupyter </SkillCard>
 			<SkillCard color="blue"> Git </SkillCard>
+			<SkillCard color="blue"> Bash </SkillCard>
+
 		</Wrap>
 	)
 }
@@ -27,10 +31,21 @@ export const UTASkills = () => {
 export const SinghSkills = () => {
 	return (
 		<Wrap>
-			<SkillCard color="orange"> Tensorflow </SkillCard>
+			<SkillCard color="orange"> Python </SkillCard>
+			<SkillCard color="red"> Tensorflow </SkillCard>
 			<SkillCard color="red"> PyTorch </SkillCard>
 			<SkillCard color="red"> Jupyter </SkillCard>
 			<SkillCard color="blue"> Git </SkillCard>
+		</Wrap>
+	)
+}
+
+export const MahmoodSkills = () => {
+	return (
+		<Wrap>
+			<SkillCard color="orange"> Python </SkillCard>
+			<SkillCard color="red"> PyTorch </SkillCard>
+			<SkillCard color="blue"> Bash </SkillCard>
 		</Wrap>
 	)
 }

@@ -12,7 +12,7 @@ import Section from '../components/section'
 // import { BioSection, BioYear } from '../components/bios'
 import Layout from '../components/layouts/article'
 import { WorkCardImg, WorkCardDesc } from '../components/grid-item'
-import { UTASkills, SinghSkills, SkillDesc } from '../components/skill'
+import { UTASkills, SinghSkills, MahmoodSkills, SkillDesc } from '../components/skill'
 import utaThumb from '../public/images/brown_cs.png'
 import mahmoodThumb from '../public/images/mahmood_lab.png'
 import { css } from '@emotion/react'
@@ -63,7 +63,12 @@ const Page = () => {
 						Work
 					</Heading>
 					<Container maxW="container.lg">
-						<SimpleGrid columns={{base:1, md:2}} spacingX="40px" spacingY="20px">
+						<SimpleGrid 
+							columns={{base:1, md:2}} 
+							spacingX="40px" 
+							spacingY="20px"
+							mb="20px"
+						>
 							<Section>
 								<WorkCardImg id="uta" title="CS1470 UTA" thumbnail={utaThumb}/>
 							</Section>
@@ -98,7 +103,7 @@ const Page = () => {
 									id="mahmood" 
 									position="Remote Research Intern" 
 									team="Mahmood Lab, Harvard Medical School" 
-									skills=<UTASkills/>
+									skills=<MahmoodSkills/>
 								>
 								</WorkCardDesc>
 							</Section>
