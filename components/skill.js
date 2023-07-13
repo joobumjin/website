@@ -1,4 +1,4 @@
-import { Tag, TagLabel, Stack, Box, Heading, Text, Divider, Wrap } from '@chakra-ui/react'
+import { Tag, TagLabel, Box, Heading, Text, Divider, Wrap } from '@chakra-ui/react'
 
 export const SkillCard = ({color, children}) => {
 	return (
