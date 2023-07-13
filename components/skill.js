@@ -23,7 +23,6 @@ export const UTASkills = () => {
 			<SkillCard color="red"> Jupyter </SkillCard>
 			<SkillCard color="blue"> Git </SkillCard>
 			<SkillCard color="blue"> Bash </SkillCard>
-
 		</Wrap>
 	)
 }

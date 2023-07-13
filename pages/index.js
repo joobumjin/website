@@ -76,7 +76,7 @@ const Page = () => {
 								<WorkCardDesc 
 									id="uta" 
 									position="Undergraduate Teaching Assistant" 
-									team="Brown University CS1470/2470: Deep Learning" 
+									team={"Brown CS1470/2470: Deep Learning"} 
 									skills=<UTASkills/>
 								>
 								</WorkCardDesc>

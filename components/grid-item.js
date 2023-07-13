@@ -56,12 +56,13 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
 
 export const WorkCardImg = ({ id, title, thumbnail }) => (
 	<Box 
-		w="100%" 
-		h="250px" 
+		w="95%" 
+		h="220px" 
 		align="center"  
 		bg="white" 
 		rounded="lg" 
 		overflow="hidden"
+		ml="5%"
 	>
 		<Center h="100%">
 			<LinkBox 
@@ -92,12 +93,12 @@ export const WorkCardImg = ({ id, title, thumbnail }) => (
 )
 
 export const WorkCardDesc = ({ id, position, team, skills }) => (
-	<Box w="100%" h="250px" align="left">
+	<Box w="100%" h="220px" align="left">
 		<Grid 
 			h="100%"
 			templateAreas={`'desc'
 							'more'`}
-			gridTemplateRows={"5fr 1fr "}
+			gridTemplateRows={"4fr 1fr "}
 		>
 			<Box
 				gridArea="desc"
@@ -120,7 +121,7 @@ export const WorkCardDesc = ({ id, position, team, skills }) => (
 					<Text fontSize={14}>{position}</Text>
 
 					<LinkOverlay as="div" href={`/works/${id}`}>
-						<Text mt={2} fontSize={20}>{team}</Text>
+						<Text mt={2} mb={4} fontSize={20}>{team}</Text>
 					</LinkOverlay>
 				</LinkBox>
 
@@ -130,7 +131,7 @@ export const WorkCardDesc = ({ id, position, team, skills }) => (
 			<NextLink 
 				href={`/works/${id}`}
 				gridArea="more">
-				<Button mt={2}>
+				<Button>
 					Learn More<ChevronRightIcon />
 				</Button>
 			</NextLink>
