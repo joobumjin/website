@@ -7,7 +7,7 @@ const Page = () => {
 	return (
 		<Layout title="Singh">
 			<SideBar> 
-				<LinkItem href={`/works/mahmood`}> Home </LinkItem>
+				<LinkItem href={`/works/singh`}> Home </LinkItem>
 			</SideBar>
 
 			<WorkContent 

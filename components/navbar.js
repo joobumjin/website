@@ -12,7 +12,7 @@ import {
 	MenuList,
 	MenuButton,
 	IconButton,
-	useColorModeValue
+	useColorModeValue,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import Logo from './logos'
@@ -27,7 +27,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
     	as={NextLink}
       href={href}
       p={2}
-      bg={active ? 'grassTeal' : undefined}
+      // bg={active ? 'grassTeal' : undefined}
       color={active ? '#202023' : inactiveColor}
       target={target}
       {...props}
@@ -41,8 +41,8 @@ const MenuLink = forwardRef((props, ref) => (
   <Link ref={ref} as={NextLink} {...props} />
 ))
 
-const NavBar = ({props}) => {
-	const {path} = props
+const NavBar = props => {
+	const { path } = props
 
 	return (
 		<Box 

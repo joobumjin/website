@@ -1,7 +1,9 @@
 import { 
 	Container, 
 	SimpleGrid,
-	Text} from '@chakra-ui/react'
+	Text,
+	UnorderedList,
+	ListItem } from '@chakra-ui/react'
 // import { ChevronRightIcon } from '@chakra-ui/icons'
 import Section from '../../components/section'
 import Paragraph from '../../components/paragraph'
@@ -61,7 +63,24 @@ const Page = () => {
 				</SectionHeader>
 
 				<Paragraph>
-					As a staff member of the Brown CS&apos; Deep Learning course, I had two main roles: Undergraduate TA and Course Developer.
+					CSCI 1470 / 2470 is Brown University's Undergraduate / Graduate Deep Learning course taught by Professor Chen Sun in the Fall and Professor Ritambhara Singh in the Spring. 
+					On average, roughly 220 students take in the course every semester.
+				</Paragraph>
+
+				<Text mt={3}> Course topics include: </Text>
+					<UnorderedList mb={3}>
+						<ListItem>Neural Networks</ListItem>
+						<ListItem>Autodifferentiation in PyTorch, Tensorflow</ListItem>
+						<ListItem>Convolutional Neural Networks</ListItem>
+						<ListItem>Recurrent Networks (RNN, LSTM, GRU)</ListItem>
+						<ListItem>Transformers</ListItem>
+						<ListItem>Variational Auto Encoders</ListItem>
+						<ListItem>Generative Adversarial Networks</ListItem>
+						<ListItem>Reinforcement Learning</ListItem>
+					</UnorderedList>
+
+				<Paragraph>
+					As a staff member of the Brown CS&apos;s Deep Learning course, I had two main roles: Undergraduate TA and Course Developer.
 
 					Developed course materials and assignments for over 200 students including written conceptual questions, interactive Notebook coding problems, and full Deep Learning model assignments.
 

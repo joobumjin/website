@@ -1,6 +1,6 @@
 import { Tag, TagLabel, Box, Heading, Text, Divider, Wrap } from '@chakra-ui/react'
 
-export const SkillCard = ({color, children}) => {
+export const SkillTag = ({color, children}) => {
 	return (
 		<Tag
 			size="lg"
@@ -16,13 +16,13 @@ export const SkillCard = ({color, children}) => {
 export const UTASkills = () => {
 	return (
 		<Wrap>
-			<SkillCard color="orange"> Python </SkillCard>
-			<SkillCard color="red"> Tensorflow </SkillCard>
-			<SkillCard color="red"> Keras </SkillCard>
-			<SkillCard color="red"> PyTorch </SkillCard>
-			<SkillCard color="red"> Jupyter </SkillCard>
-			<SkillCard color="blue"> Git </SkillCard>
-			<SkillCard color="blue"> Bash </SkillCard>
+			<SkillTag color="orange"> Python </SkillTag>
+			<SkillTag color="red"> Tensorflow </SkillTag>
+			<SkillTag color="red"> Keras </SkillTag>
+			<SkillTag color="red"> PyTorch </SkillTag>
+			<SkillTag color="red"> Jupyter </SkillTag>
+			<SkillTag color="blue"> Git </SkillTag>
+			<SkillTag color="blue"> Bash </SkillTag>
 		</Wrap>
 	)
 }
@@ -30,11 +30,11 @@ export const UTASkills = () => {
 export const SinghSkills = () => {
 	return (
 		<Wrap>
-			<SkillCard color="orange"> Python </SkillCard>
-			<SkillCard color="red"> Tensorflow </SkillCard>
-			<SkillCard color="red"> PyTorch </SkillCard>
-			<SkillCard color="red"> Jupyter </SkillCard>
-			<SkillCard color="blue"> Git </SkillCard>
+			<SkillTag color="orange"> Python </SkillTag>
+			<SkillTag color="red"> Tensorflow </SkillTag>
+			<SkillTag color="red"> PyTorch </SkillTag>
+			<SkillTag color="red"> Jupyter </SkillTag>
+			<SkillTag color="blue"> Git </SkillTag>
 		</Wrap>
 	)
 }
@@ -42,9 +42,9 @@ export const SinghSkills = () => {
 export const MahmoodSkills = () => {
 	return (
 		<Wrap>
-			<SkillCard color="orange"> Python </SkillCard>
-			<SkillCard color="red"> PyTorch </SkillCard>
-			<SkillCard color="blue"> Bash </SkillCard>
+			<SkillTag color="orange"> Python </SkillTag>
+			<SkillTag color="red"> PyTorch </SkillTag>
+			<SkillTag color="blue"> Bash </SkillTag>
 		</Wrap>
 	)
 }
@@ -52,7 +52,7 @@ export const MahmoodSkills = () => {
 export const SkillDesc = ({title, children}) => {
 	return (
 		<Box>
-			<Heading as="h5"> {title} </Heading>
+			<Heading as="h5" variant="skill-title"> {title} </Heading>
 			<Text mt={3}> {children} </Text>
 			<Divider my={6} />
 		</Box>

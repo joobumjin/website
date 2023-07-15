@@ -45,7 +45,8 @@ export const SideBar = ({children}) => {
 				direction={'column'}
 				display={{base: 'none', md: 'flex'}}
 				alignItems="left"
-				mt={6}
+				maxW={{base: '0%', md: '15%'}}
+				position="absolute"
 			> 
 				{children}
 			</Stack>
@@ -57,9 +58,7 @@ export const WorkContent = ({title, role, img, children}) => {
 	return (
 		<Container 
 			maxW={{base: '100%', md: '70%'}}
-			ml={{base: '0%', md: '15%'}}
-			mr={{base: '0%', md: '15%'}}
-			mt={{base: 5, md: -20}}
+			mt={6}
 			css={css`
 				scroll-margin-top: 80px;
 			`}
