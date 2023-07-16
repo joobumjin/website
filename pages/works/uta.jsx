@@ -111,7 +111,7 @@ const Page = () => {
 
 				<Paragraph>
 					As a UTA and Course Dev, I was part of CS1470&apos;s main point of contact between students and the course. 
-					The course's primary website can be found <Link as={NextLink} href="http://www.cs.brown.edu/courses/csci1470/">here<ExternalLinkIcon mx='2px' />.</Link>
+					The course&apos;s primary website can be found <Link as={NextLink} href="http://www.cs.brown.edu/courses/csci1470/">here<ExternalLinkIcon mx='2px' />.</Link>
 				</Paragraph>
 			
 			</WorkSection>
