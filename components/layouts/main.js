@@ -6,7 +6,7 @@ const Main = ({children, router}) => {
 	return (
 		<Box as="main" pb={8}>
 			<Head>
-				<meta name="viewport" content="width=100px, initial-scale=1" />
+				<meta name="viewport" content="width=100, initial-scale=1" />
 				<title> Bumjin Joo - Home </title>
 			</Head>
 

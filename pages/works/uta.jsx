@@ -11,10 +11,33 @@ import Paragraph from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 import { UTASkills } from '../../components/skill'
 import utaThumb from '../../public/images/brown_cs.png'
-import { SectionHeader, SideBar, WorkContent, LinkItem } from '../../components/work_util'
-
+import { WorkSection, SideBar, WorkTitle, LinkItem } from '../../components/work_util'
 
 const Page = () => {
+	// if (typeof window !== "undefined") {
+	// 	const anchor_list = document.querySelectorAll(".nav_link");	
+
+	// 	window.onscroll = () => {
+	// 		console.log("checking for highlight");
+	// 	  anchor_list.forEach((anchor_link) => {
+	// 	  	var anchor_section = anchor_link.hash.slice(1);
+	// 	  	if (anchor_link.hash === "") { 
+	// 	  		anchor_section = "summary"; 
+	// 	  	}
+	// 	  	const section = document.getElementById(anchor_section);
+	// 	  	if (section !== null) {
+	// 		    const sectionTop = section.offsetTop;
+	// 		    const sectionHeight = section.offsetHeight;
+	// 		    if ((pageYOffset >= sectionTop) && (pageYOffset < sectionTop + sectionHeight)) {
+	// 		      anchor_link.classList.add("active");
+	// 		  	} else {
+	// 		  		anchor_link.classList.remove("active");
+	// 		  	}
+	// 	  	}
+	// 	  });
+	// 	};
+	// }
+
 	return (
 		<Layout title="UTA">			
 			<SideBar> 
@@ -22,7 +45,7 @@ const Page = () => {
 				<LinkItem href={`/works/uta/#overview`}> Overview </LinkItem>
 			</SideBar>
 
-			<WorkContent 
+			<WorkTitle 
 				title="CSCI 1470 / 2470: (Graduate) Deep Learning"
 				role="Undergraduate Teaching Assistant at Brown University"
 				img={utaThumb}
@@ -57,13 +80,12 @@ const Page = () => {
 						</Section>
 					</SimpleGrid>
 				</Container>
+			</WorkTitle>
 
-				<SectionHeader id="overview">
-					Overview
-				</SectionHeader>
+			<WorkSection id="overview" header="Overview">
 
 				<Paragraph>
-					CSCI 1470 / 2470 is Brown University's Undergraduate / Graduate Deep Learning course taught by Professor Chen Sun in the Fall and Professor Ritambhara Singh in the Spring. 
+					CSCI 1470 / 2470 is Brown University&apos;s Undergraduate / Graduate Deep Learning course taught by Professor Chen Sun in the Fall and Professor Ritambhara Singh in the Spring. 
 					On average, roughly 220 students take in the course every semester.
 				</Paragraph>
 
@@ -90,8 +112,9 @@ const Page = () => {
 
 					Taught lab sections and answered student questions regarding undergraduate & graduate course material, student code bugs, and problems in lab assignments
 				</Paragraph>
-
-			</WorkContent>
+				
+			
+			</WorkSection>
 		</Layout>
 	)
 }

@@ -1,7 +1,7 @@
 import Layout from '../../components/layouts/article'
 import { Text } from '@chakra-ui/react'
 import utaThumb from '../../public/images/brown_cs.png'
-import { SectionHeader, SideBar, WorkContent, LinkItem } from '../../components/work_util'
+import { WorkSection, SideBar, WorkTitle, LinkItem  } from '../../components/work_util'
 
 const Page = () => {
 	return (
@@ -10,14 +10,15 @@ const Page = () => {
 				<LinkItem href={`/works/singh`}> Home </LinkItem>
 			</SideBar>
 
-			<WorkContent 
+			<WorkTitle 
 				title="Singh Lab @ Brown University Dept. of CS"
 				role="Student Researcher"
 				img={utaThumb}
 			>
-				<SectionHeader> Work In Progress </SectionHeader>
+			</WorkTitle>
+			<WorkSection header="Work In Progress" id="wip">
 				<Text> Coming Soon </Text>
-			</WorkContent>
+			</WorkSection>
 		</Layout>
 	)
 }

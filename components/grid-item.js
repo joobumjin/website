@@ -84,7 +84,7 @@ export const WorkCardImg = ({ id, title, thumbnail }) => (
 					src={thumbnail}
 					alt={title}
 					className="grid-item-thumbnail"
-					placeHolder="blur"
+					placeholder="blur"
 					loading="lazy"
 				/>
 			</LinkBox>
@@ -101,7 +101,7 @@ export const WorkCardDesc = ({ id, position, team, skills }) => (
 			gridTemplateRows={"4fr 1fr "}
 		>
 			<Box
-				gridArea="desc"
+				gridarea="desc"
 			>
 				<LinkBox 
 					as = {NextLink}
@@ -130,7 +130,7 @@ export const WorkCardDesc = ({ id, position, team, skills }) => (
 
 			<NextLink 
 				href={`/works/${id}`}
-				gridArea="more">
+				gridarea="more">
 				<Button>
 					Learn More<ChevronRightIcon />
 				</Button>

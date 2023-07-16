@@ -23,24 +23,33 @@ export const LinkItem = ({ href, path, target, children, ...props }) => {
     	bg={active ? 'grassTeal' : undefined}
     	color={active ? '#202023' : inactiveColor}
     	target={target}
+    	className="nav_link"
     	{...props}
     >
       {children}
     </Link>
-  )
+)
 }
 
-export const SectionHeader = ({id, children}) => {
+export const WorkSection = ({id, header, children}) => {
 	return (
-		<Heading as="h2" variant="page-title" id={id}>
+		<Container 
+			id={id}
+			css={css`
+					scroll-margin-top: 80px;
+				`}
+		>
+			<Heading as="h2" variant="subsection-title">
+				{header}
+			</Heading>
 			{children}
-		</Heading>
+		</Container>
 	)
 }
 
 export const SideBar = ({children}) => {
 	return (
-		<div class="sidebar">
+		<div className="sidebar">
 			<Stack 
 				direction={'column'}
 				display={{base: 'none', md: 'flex'}}
@@ -54,17 +63,21 @@ export const SideBar = ({children}) => {
 	)
 }
 
-export const WorkContent = ({title, role, img, children}) => {
+export const WorkTitle = ({title, role, img, children}) => {
 	return (
 		<Container 
 			maxW={{base: '100%', md: '70%'}}
-			mt={6}
-			css={css`
-				scroll-margin-top: 80px;
-			`}
+			mt={3}
 			mb={6}
+			id="summary"
 		>
-			<Heading as="h2" variant="page-title" id="summary">
+			<Heading 
+				as="h2" 
+				variant="page-title" 
+				css={css`
+					scroll-margin-top: 80px;
+				`}
+			>
 				{title}
 			</Heading>
 
@@ -86,7 +99,7 @@ export const WorkContent = ({title, role, img, children}) => {
 						<Image
 							src={img}
 							alt="CS 1470 UTA"
-							placeHolder="blur"
+							placeholder="blur"
 							loading="lazy"
 						/>
 					</Center>
