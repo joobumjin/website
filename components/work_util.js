@@ -22,14 +22,15 @@ export const LinkItem = ({ href, path, target, children, ...props }) => {
     	p={2}
     	bg={active ? 'grassTeal' : undefined}
     	color={active ? '#202023' : inactiveColor}
+    	// color={'grassTeal'}
+    	fontWeight={600}
     	target={target}
     	className="nav_link"
     	{...props}
     >
       {children}
     </Link>
-)
-}
+)}
 
 export const WorkSection = ({id, header, children}) => {
 	return (
@@ -39,7 +40,23 @@ export const WorkSection = ({id, header, children}) => {
 					scroll-margin-top: 80px;
 				`}
 		>
-			<Heading as="h2" variant="subsection-title">
+			<Heading as="h2" variant="work-section-title">
+				{header}
+			</Heading>
+			{children}
+		</Container>
+	)
+}
+
+export const WorkSubSection = ({id, header, children}) => {
+	return (
+		<Container 
+			id={id}
+			css={css`
+					scroll-margin-top: 80px;
+				`}
+		>
+			<Heading as="h2" variant="work-subsection-title">
 				{header}
 			</Heading>
 			{children}
@@ -68,7 +85,6 @@ export const WorkTitle = ({title, role, img, children}) => {
 		<Container 
 			maxW={{base: '100%', md: '70%'}}
 			mt={3}
-			mb={6}
 			id="summary"
 		>
 			<Heading 
@@ -81,7 +97,7 @@ export const WorkTitle = ({title, role, img, children}) => {
 				{title}
 			</Heading>
 
-			<Text mb={10}>
+			<Text mt={2} mb={6}>
 				{role}
 			</Text>
 
