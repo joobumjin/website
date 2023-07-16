@@ -65,7 +65,7 @@ const Page = () => {
 					<Container maxW="container.lg">
 						<SimpleGrid 
 							columns={{base:1, md:2}} 
-							spacingX="40px" 
+							spacingX="20px" 
 							spacingY="20px"
 							mb="20px"
 						>
