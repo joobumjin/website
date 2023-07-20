@@ -1,5 +1,4 @@
 import { 
-	Container, 
 	SimpleGrid,
 	Text,
 	UnorderedList,
