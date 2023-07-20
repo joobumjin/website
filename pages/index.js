@@ -4,7 +4,8 @@ import {
 	Heading, 
 	Image, 
 	useColorModeValue, 
-	SimpleGrid } from '@chakra-ui/react'
+	SimpleGrid,
+	UnorderedList, ListItem } from '@chakra-ui/react'
 // import { ChevronRightIcon } from '@chakra-ui/icons'
 // import NextLink from 'next/link'
 import Section from '../components/section'
@@ -125,7 +126,17 @@ const Page = () => {
 					</Heading>
 					<Container maxW="container.lg">
 						<SkillDesc title="Machine Learning">
-							Familiar with most widely used machine learning frameworks like Tensorflow, Keras, and PyTorch.
+							<UnorderedList>
+							<ListItem>Experienced with most widely used machine learning frameworks like Tensorflow, Keras, and PyTorch.</ListItem>
+							</UnorderedList>
+						</SkillDesc>
+						<SkillDesc title="Software Engineering">
+							<UnorderedList>
+							<ListItem>Comfortable with virtualization through environments made in Conda/Python VEnvs and containerization through Docker.</ListItem>
+							<ListItem>Skilled at version control management through Git.</ListItem>
+							<ListItem>Experienced with Agile Development patterns.</ListItem>
+							<ListItem>Adept at testing code functionality by writing unit and system tests.</ListItem>
+							</UnorderedList>
 						</SkillDesc>
 					</Container>
 				</Section>				
