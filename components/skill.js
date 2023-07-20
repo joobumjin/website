@@ -51,10 +51,10 @@ export const MahmoodSkills = () => {
 
 export const SkillDesc = ({title, children}) => {
 	return (
-		<Box>
+		<Box mt={6}>
 			<Heading as="h5" variant="skill-title"> {title} </Heading>
-			<Text mt={3}> {children} </Text>
-			<Divider my={6} />
+			{children}
+			<Divider mt={6} />
 		</Box>
 	)
 }

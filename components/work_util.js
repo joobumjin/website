@@ -36,6 +36,8 @@ export const WorkSection = ({id, header, children}) => {
 	return (
 		<Container 
 			id={id}
+			maxW="750px"
+			ml={{lg: "15%"}}
 			css={css`
 					scroll-margin-top: 80px;
 				`}
@@ -52,6 +54,7 @@ export const WorkSubSection = ({id, header, children}) => {
 	return (
 		<Container 
 			id={id}
+			maxW="700px"
 			css={css`
 					scroll-margin-top: 80px;
 				`}
@@ -88,6 +91,9 @@ export const WorkTitle = ({title, role, img, children}) => {
 			mt={3}
 			id="summary"
 		>
+			<Container 
+				maxW="750px"
+			>
 			<Heading 
 				as="h2" 
 				variant="page-title" 
@@ -126,6 +132,7 @@ export const WorkTitle = ({title, role, img, children}) => {
 				maxW="750px"
 			>
 			{children}
+			</Container>
 			</Container>
 		</Container>
 	)

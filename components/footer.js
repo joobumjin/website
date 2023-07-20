@@ -7,7 +7,7 @@ import {
 
 export const ContactFooter = () => {
 	return (
-		<Container> 
+		<Container mt={6}> 
 			<Box 
 				align="center"
 				id="contact"
