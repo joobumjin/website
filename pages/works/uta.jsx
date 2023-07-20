@@ -136,7 +136,7 @@ const Page = () => {
 					Staff could post important course updates and also answer student questions or endorse student solutions.
 					</Paragraph>
 					<Paragraph>
-					Oftentimes, I would debug implementation specific code within students' code. This would involve cloning their project repository and reading / testing their code on my local machine.
+					Oftentimes, I would debug implementation specific code within students&apos; code. This would involve cloning their project repository and reading / testing their code on my local machine.
 					</Paragraph>
 				</WorkSubSection>
 
@@ -163,13 +163,13 @@ const Page = () => {
 
 			<WorkSection id="dev" header="Responsibilities as a Course Dev">
 				<Paragraph>
-				Another active responsibility as a TA was to help develop the assignments to align with the professors' visions for the course.
+				Another active responsibility as a TA was to help develop the assignments to align with the professors&apos; visions for the course.
 				</Paragraph>
 				<Paragraph>
 				Specifically, I developed course materials and assignments for over 200 students including written conceptual questions, interactive Notebook coding problems, and full Deep Learning model assignments. 
 
-				The first assignment I helped develop was an interactive Notebook assignment where students would implement a heavily simplified version of PyTorch's Tensor/Autogradient tree structure.
-				Next, I helped develop the following assignment in which students implemented a boiled-down version of Tensorflow's/Keras's Autograd graph traversal structure.
+				The first assignment I helped develop was an interactive Notebook assignment where students would implement a heavily simplified version of PyTorch&apos;s Tensor/Autogradient tree structure.
+				Next, I helped develop the following assignment in which students implemented a boiled-down version of Tensorflow&apos;s/Keras&apos;s Autograd graph traversal structure.
 				</Paragraph>
 
 				<Paragraph>
