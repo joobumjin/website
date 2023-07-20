@@ -13,7 +13,8 @@ import Section from '../components/section'
 import Layout from '../components/layouts/article'
 import { WorkCardImg, WorkCardDesc } from '../components/grid-item'
 import { UTASkills, SinghSkills, MahmoodSkills, SkillDesc } from '../components/skill'
-import utaThumb from '../public/images/brown_cs.png'
+import utaThumb from '../public/images/uta.png'
+import brownCS from '../public/images/brown_cs.png'
 import mahmoodThumb from '../public/images/mahmood_lab.png'
 import { css } from '@emotion/react'
 
@@ -83,7 +84,7 @@ const Page = () => {
 							</Section>
 
 							<Section>
-								<WorkCardImg id="singh" title="Singh Lab" thumbnail={utaThumb}/>
+								<WorkCardImg id="singh" title="Singh Lab" thumbnail={brownCS}/>
 							</Section>
 							<Section>
 								<WorkCardDesc 

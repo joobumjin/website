@@ -69,9 +69,9 @@ export const SideBar = ({children}) => {
 		<div className="sidebar">
 			<Stack 
 				direction={'column'}
-				display={{base: 'none', md: 'flex'}}
+				display={{base: 'none', lg: 'flex'}}
 				alignItems="left"
-				maxW={{base: '0%', md: '15%'}}
+				maxW={{base: '0%', lg: '15%'}}
 				position="absolute"
 			> 
 				{children}
@@ -83,7 +83,8 @@ export const SideBar = ({children}) => {
 export const WorkTitle = ({title, role, img, children}) => {
 	return (
 		<Container 
-			maxW={{base: '100%', md: '70%'}}
+			maxW={{base: '100%', lg: '70%'}}
+			ml={{base:"0%", lg: "15%"}}
 			mt={3}
 			id="summary"
 		>
@@ -104,7 +105,7 @@ export const WorkTitle = ({title, role, img, children}) => {
 			<Center w="100%">
 				<Box 
 					w="750px" 
-					h="500px" 
+					h="450px" 
 					align="center"  
 					bg="white" 
 					rounded="lg" 
@@ -121,8 +122,11 @@ export const WorkTitle = ({title, role, img, children}) => {
 					</Center>
 				</Box>
 			</Center>
-
+			<Container
+				maxW="750px"
+			>
 			{children}
+			</Container>
 		</Container>
 	)
 }

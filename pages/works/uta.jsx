@@ -8,10 +8,9 @@ import {
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import Section from '../../components/section'
 import Paragraph from '../../components/paragraph'
-// import { BioSection, BioYear } from '../components/bios'
 import Layout from '../../components/layouts/article'
 import { UTASkills } from '../../components/skill'
-import utaThumb from '../../public/images/brown_cs.png'
+import utaThumb from '../../public/images/uta.png'
 import { WorkSection, SideBar, WorkTitle, LinkItem, WorkSubSection } from '../../components/work_util'
 import NextLink from 'next/link'
 
@@ -47,8 +46,8 @@ const Page = () => {
 				<LinkItem href={`/works/uta/#overview`}> Overview </LinkItem>
 				<LinkItem href={`/works/uta/#ta`}> UTA Responsibilities </LinkItem>
 				<LinkItem href={`/works/uta/#oh`} mt={-4} ml={3}> Office Hours </LinkItem>
-				<LinkItem href={`/works/uta/#lab`} mt={-4} ml={3}> Lab </LinkItem>
 				<LinkItem href={`/works/uta/#ed`} mt={-4} ml={3}> Forum </LinkItem>
+				<LinkItem href={`/works/uta/#lab`} mt={-4} ml={3}> Lab </LinkItem>
 				<LinkItem href={`/works/uta/#grade`} mt={-4} ml={3}> Staff Meetings </LinkItem>
 				<LinkItem href={`/works/uta/#dev`}> Course Dev Responsibilities </LinkItem>
 			</SideBar>
@@ -58,36 +57,34 @@ const Page = () => {
 				role="Undergraduate Teaching Assistant at Brown University"
 				img={utaThumb}
 			>
-				<Container maxW="container.lg">
-					<SimpleGrid columns={{base:1, md:2}} spacingX="40px" spacingY="5px">
-						<Section>
-							<Text fontSize="20" as='b'> Roles </Text>
-							<Text>
-								Undergraduate Teaching Assistant,
-								Summer Course Developer
-							</Text>
-						</Section>
+				<SimpleGrid columns={{base:1, md:2}} spacingX="40px" spacingY="5px">
+					<Section>
+						<Text fontSize="20" as='b'> Roles </Text>
+						<Text>
+							Undergraduate Teaching Assistant,
+							Summer Course Developer
+						</Text>
+					</Section>
 
-						<Section>
-							<Text fontSize="20" as='b'> Timeline </Text>
-							<Text>
-								July, 2022 - Present
-							</Text>
-						</Section>
+					<Section>
+						<Text fontSize="20" as='b'> Timeline </Text>
+						<Text>
+							July, 2022 - Present
+						</Text>
+					</Section>
 
-						<Section>
-							<Text fontSize="20" as='b'> Skills </Text>
-							<Text>
-								MLE, SWE, Version Control,
-							</Text>
-						</Section>
+					<Section>
+						<Text fontSize="20" as='b'> Skills </Text>
+						<Text>
+							MLE, SWE, Version Control, Unit Testing, Debugging
+						</Text>
+					</Section>
 
-						<Section>
-							<Text fontSize="20" as='b'> Tools </Text>
-							<UTASkills/>
-						</Section>
-					</SimpleGrid>
-				</Container>
+					<Section>
+						<Text fontSize="20" as='b'> Tools </Text>
+						<UTASkills/>
+					</Section>
+				</SimpleGrid>
 			</WorkTitle>
 
 			<WorkSection id="overview" header="Overview">
@@ -111,7 +108,7 @@ const Page = () => {
 
 				<Paragraph>
 					As a UTA and Course Dev, I was part of CS1470&apos;s main point of contact between students and the course. 
-					The course&apos;s primary website can be found <Link as={NextLink} href="http://www.cs.brown.edu/courses/csci1470/">here<ExternalLinkIcon mx='2px' />.</Link>
+					The course&apos;s primary website can be found <Link as={NextLink} href="http://www.cs.brown.edu/courses/csci1470/">here<ExternalLinkIcon mx='2px' /></Link>.
 				</Paragraph>
 			
 			</WorkSection>
@@ -124,7 +121,7 @@ const Page = () => {
 				<WorkSubSection id="oh" header="Office Hours">
 					<Paragraph>
 					Every week, I held hybrid (In Person/Remote) office hours for 2 hours. 
-					During these office hour sessions, students could sign up to be claimed through Brown CS&apos;s queue system: <Link as={NextLink} href="https://hours.cs.brown.edu/">Hours at Brown<ExternalLinkIcon mx='2px' />.</Link>
+					During these office hour sessions, students could sign up to be claimed through Brown CS&apos;s queue system: <Link as={NextLink} href="https://hours.cs.brown.edu/">Hours at Brown<ExternalLinkIcon mx='2px' /></Link>.
 					Once claimed, they would have 15-20 minutes to ask any questions regarding any course related work.
 					</Paragraph>
 					<Paragraph>
@@ -133,29 +130,51 @@ const Page = () => {
 					</Paragraph>
 				</WorkSubSection>
 
-				<WorkSubSection id="lab" header="Weekly Lab">
-
-				</WorkSubSection>
-
 				<WorkSubSection id="ed" header="Forum Questions: EdStem">
-
-				</WorkSubSection>
-
-				<WorkSubSection id="grade" header="Grading/Weekly Staff Meetings">
-
-				</WorkSubSection>
-				<Paragraph>
-		Debugged course code based on student reports and deployed bug fixes during the course.
-
-					Participated in weekly staff discussions covering student progress, presenting on upcoming projects, and implementing changes to improve course quality.
-
-					Taught lab sections and answered student questions regarding undergraduate & graduate course material, student code bugs, and problems in lab assignments
+					<Paragraph>
+					Supplementing these office hours, CS1470 also had a forum open to students. In the forum, students could post questions, problems, and responses to others.
+					Staff could post important course updates and also answer student questions or endorse student solutions.
 					</Paragraph>
+					<Paragraph>
+					Oftentimes, I would debug implementation specific code within students' code. This would involve cloning their project repository and reading / testing their code on my local machine.
+					</Paragraph>
+				</WorkSubSection>
+
+				<WorkSubSection id="lab" header="Weekly Lab">
+					<Paragraph>
+					I also taught a weekly lab. These labs were interactive Notebook assignments which would introduce students to new content.
+					As the TA for the lab, I would go around answering any questions and checking student progress.
+					If any bugs came up during the lab, I would also fix those bugs by making edits to the Google Colab stencils
+					</Paragraph>
+				</WorkSubSection>
+
+				<WorkSubSection id="grade" header="Staff Meetings / Grading">
+					<Paragraph>
+					At weekly staff meetings, the course staff would meet to discuss course progress, make adjustments to assignments and the progression of the course, and grade assignments. 
+					As a majority of the homework assignments were rewritten, we closely monitored these homeworks both technically and pedagogically.
+					</Paragraph>
+
+					<Paragraph>
+					In particular, we made sure to quickly patch and release fixes for bugs in stencil code when they were reported on EdStem. 
+					Additionally, we considered a rough average of student difficulty to guide how assignments were adjusted and grdaed.
+					</Paragraph>
+				</WorkSubSection>
 			</WorkSection> 
 
 			<WorkSection id="dev" header="Responsibilities as a Course Dev">
-					Developed course materials and assignments for over 200 students including written conceptual questions, interactive Notebook coding problems, and full Deep Learning model assignments.
+				<Paragraph>
+				Another active responsibility as a TA was to help develop the assignments to align with the professors' visions for the course.
+				</Paragraph>
+				<Paragraph>
+				Specifically, I developed course materials and assignments for over 200 students including written conceptual questions, interactive Notebook coding problems, and full Deep Learning model assignments. 
 
+				The first assignment I helped develop was an interactive Notebook assignment where students would implement a heavily simplified version of PyTorch's Tensor/Autogradient tree structure.
+				Next, I helped develop the following assignment in which students implemented a boiled-down version of Tensorflow's/Keras's Autograd graph traversal structure.
+				</Paragraph>
+
+				<Paragraph>
+				In general, I also contributed to testing and autograding. Specifically, I helped write Bash scripts which would be run from the machine receiving submissions as well as the Python code that would verify the functionality of the submitted code. 
+				</Paragraph>
 			</WorkSection> 
 		</Layout>
 	)
