@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import Image from 'next/image'
-import { Grid, Box, Text, LinkBox, LinkOverlay, Button, Center } from '@chakra-ui/react'
+import { Grid, Box, Text, LinkBox, LinkOverlay, Button, Center, AspectRatio } from '@chakra-ui/react'
 import { css } from '@emotion/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
@@ -37,14 +37,23 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
 		        }
 	        `}
 		>
-			<Image
-				src={thumbnail}
-				alt={title}
-				className="grid-item-thumbnail"
-				placeHolder="blur"
-				loading="lazy"
-			/>
-
+			<AspectRatio 
+				w="100%" 
+				ratio={15 / 8}
+				align="center"  
+				bg="white" 
+				rounded="lg" 
+				overflow="hidden"
+				mb={6}
+			>
+				<Image
+					src={thumbnail}
+					alt={title}
+					className="grid-item-thumbnail"
+					placeHolder="blur"
+					loading="lazy"
+				/>
+			</AspectRatio>
 			<LinkOverlay as="div" href={`/works/${id}`}>
 				<Text mt={2} fontSize={20}>{title}</Text>
 			</LinkOverlay>
@@ -55,9 +64,9 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
 )
 
 export const WorkCardImg = ({ id, title, thumbnail }) => (
-	<Box 
+	<AspectRatio
+		ratio={15 / 8}  
 		w="95%" 
-		h={{base: "250px", sm: "230px", md: "200px"}}
 		align="center"  
 		bg="white" 
 		rounded="lg" 
@@ -87,14 +96,15 @@ export const WorkCardImg = ({ id, title, thumbnail }) => (
 					className="grid-item-thumbnail"
 					placeholder="blur"
 					loading="lazy"
+					fit="cover"
 				/>
 			</LinkBox>
 		</Center>
-	</Box>
+	</AspectRatio>
 )
 
 export const WorkCardDesc = ({ id, position, team, skills }) => (
-	<Box w="100%" h={{base: "250px", sm: "230px", md: "200px"}}  align="left">
+	<Box w="100%" h={{base: "250px", sm: "230px", md: "210px", lg: "230px"}}  align="left">
 		<Grid 
 			h="100%"
 			templateAreas={{base: `'all'`,

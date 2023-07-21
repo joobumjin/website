@@ -6,7 +6,8 @@ import {
 	Box, 
 	Text, 
 	Link,
-	useColorModeValue } from '@chakra-ui/react'
+	useColorModeValue,
+	AspectRatio } from '@chakra-ui/react'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import { css } from '@emotion/react'
@@ -109,9 +110,9 @@ export const WorkTitle = ({title, role, img, children}) => {
 			</Text>
 
 			<Center w="100%">
-				<Box 
+				<AspectRatio 
 					w="750px" 
-					h="450px" 
+					ratio={15 / 8}
 					align="center"  
 					bg="white" 
 					rounded="lg" 
@@ -121,12 +122,13 @@ export const WorkTitle = ({title, role, img, children}) => {
 					<Center w="100%" h="100%">
 						<Image
 							src={img}
-							alt="CS 1470 UTA"
+							fit="cover"
+							alt={title}
 							placeholder="blur"
 							loading="lazy"
 						/>
 					</Center>
-				</Box>
+				</AspectRatio>
 			</Center>
 			<Container
 				maxW="750px"
