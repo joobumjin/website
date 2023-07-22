@@ -68,7 +68,7 @@ const Page = () => {
 					<Section>
 						<Text fontSize="20" as='b'> Timeline </Text>
 						<Text>
-							July, 2022 - Present
+							May, 2022 - Present
 						</Text>
 					</Section>
 
@@ -175,6 +175,8 @@ const Page = () => {
 				In general, I also contributed to testing and autograding. Specifically, I helped write Bash scripts which would be run from the machine receiving submissions as well as the Python code that would verify the functionality of the submitted code. 
 				</Paragraph>
 			</WorkSection> 
+
+
 		</Layout>
 	)
 }

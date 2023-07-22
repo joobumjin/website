@@ -8,6 +8,13 @@ const Main = ({children, router}) => {
 			<Head>
 				<meta name="viewport" content="width=100, initial-scale=1" />
 				<title> Bumjin Joo - Home </title>
+				<link
+		          rel="icon"
+		          sizes="any"
+		          type="image/svg+xml"
+		          href="/images/b_dark.png"
+		        />
+
 			</Head>
 
 			<NavBar props={router.asPath} />

@@ -9,7 +9,10 @@ const variants = {
 	exit: {opacity: 0, x: 0, y: 20 },
 }
 
-const Layout = ({ children, title }) => (
+const Layout = ({ children, title }) => {
+	const t = `Bumjin Joo - ${title}`
+
+	return (
 	<motion.article
 		initial="hidden"
 		animate="enter"
@@ -21,7 +24,9 @@ const Layout = ({ children, title }) => (
 		<>
 			{title && (
 				<Head>
-					<title>Bumjin Joo - {title}</title>
+					<title>{t}</title>
+		            <meta name="twitter:title" content={t} />
+		            <meta property="og:title" content={t} />
 				</Head>
 			)}
 			{children}
@@ -29,6 +34,7 @@ const Layout = ({ children, title }) => (
 			<GridItemStyle />
 		</>
 	</motion.article>
-)
+	)
+}
 
 export default Layout

@@ -18,14 +18,14 @@ padding: 10px;
 `
 
 const Logo = () => {
-	const logoImg = `/images/b_logo${useColorModeValue('', '_dark')}.jpg`
+	const logoImg = `/images/b${useColorModeValue('', '_dark')}.png`
 
 	return (
 		<Link href = "/">
 			<LogoBox>
 				<Image src={logoImg} width={20} height={20} alt="logo"/>
 				<Text color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-					ml={3}
+					ml={2}
 				>
 				Bumjin Joo
 				</Text>
