@@ -1,8 +1,8 @@
 import { 
 	SimpleGrid,
 	Text,
-	UnorderedList,
-	ListItem,
+	// UnorderedList,
+	// ListItem,
 	Link } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import Section from '../../components/section'
