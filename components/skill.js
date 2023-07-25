@@ -35,6 +35,7 @@ export const SinghSkills = () => {
 			<SkillTag color="red"> PyTorch </SkillTag>
 			<SkillTag color="red"> Jupyter </SkillTag>
 			<SkillTag color="blue"> Git </SkillTag>
+			<SkillTag color="blue"> Bash </SkillTag>
 		</Wrap>
 	)
 }
