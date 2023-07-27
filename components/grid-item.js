@@ -110,7 +110,7 @@ export const WorkCardDesc = ({ id, position, team, skills }) => (
 			templateAreas={{base: `'all'`,
 							md:`'desc'
 							   'more'`}}
-			gridTemplateRows={{md: "4fr 1fr "}}
+			gridTemplateRows={{base: "4fr", md: "4fr 1fr"}}
 		>
 			<Box
 				area={{base: "all", md: "desc"}}
@@ -133,21 +133,25 @@ export const WorkCardDesc = ({ id, position, team, skills }) => (
 					<Text fontSize={14}>{position}</Text>
 
 					<LinkOverlay as="div" href={`/works/${id}`}>
-						<Text mb={{base: 1, sm: 1, md: 3}} fontSize={20}>{team}</Text>
+						<Text mb={{base: 1, md: 3}} fontSize={20}>{team}</Text>
 					</LinkOverlay>
 				</LinkBox>
 
 				{skills}
 			</Box>
 
-			<NextLink 
-				href={`/works/${id}`}
+			<Box
 				area={{base: "all", md: "more"}}
 			>
-				<Button mt={{base:'2', lg:'0'}}>
-					Learn More<ChevronRightIcon />
-				</Button>
-			</NextLink>
+				<NextLink 
+					href={`/works/${id}`}
+					// area={{base: "all", md: "more"}}
+				>
+					<Button mt={{base:'2', lg:'0'}}>
+						Learn More<ChevronRightIcon />
+					</Button>
+				</NextLink>
+			</Box>
 
 		</Grid>
 	</Box>

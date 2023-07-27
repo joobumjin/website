@@ -128,12 +128,12 @@ const Page = () => {
 						<SkillDesc title="Machine Learning">
 							<UnorderedList>
 								<ListItem>Experienced with most widely used machine learning frameworks like Tensorflow, Keras, and PyTorch.</ListItem>
-								<ListItem>Familiar with Machine Learning research.</ListItem>
+								<ListItem>Familiar with Machine Learning research on large scale datasets.</ListItem>
 							</UnorderedList>
 						</SkillDesc>
 						<SkillDesc title="Software Engineering">
 							<UnorderedList>
-								<ListItem>Comfortable with virtualization through environments made in Conda/Python VEnvs and containerization through Docker.</ListItem>
+								<ListItem>Comfortable with virtualization throguh Conda/Python VEnvs and containerization through Docker.</ListItem>
 								<ListItem>Skilled at version control management through Git.</ListItem>
 								<ListItem>Experienced with Agile Development patterns.</ListItem>
 								<ListItem>Adept at testing code functionality by writing unit and system tests.</ListItem>
