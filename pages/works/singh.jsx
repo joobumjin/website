@@ -20,7 +20,7 @@ const Page = () => {
 				<LinkItem href={`/works/singh`}> Home </LinkItem>
 				<LinkItem href={`/works/singh/#overview`}> Overview </LinkItem>
 				<LinkItem href={`/works/singh/#projects`}> Current Projects </LinkItem>
-				<LinkItem href={`/works/singh/#zero`} mt={-4} ml={3}> Zero Shot </LinkItem>
+				<LinkItem href={`/works/singh/#multi`} mt={-4} ml={3}> Multimodal </LinkItem>
 			</SideBar>
 
 			<WorkTitle 
@@ -63,19 +63,22 @@ const Page = () => {
 				</Paragraph>
 			</WorkSection>
 
-			<WorkSection header="Current Projects" id="projects">
-				<WorkSubSection header="Zero Shot" id="zero">
+			<WorkSection header="Projects" id="projects">
+				<WorkSubSection header="Multimodal Zero Shot" id="multi">
 					<Paragraph>
 						My current project at the Singh Lab is a multimodal model which attempts to use contrastive learning in an attempt to learn an association between medical biopsy images and their clinical diagnoses.
+						Our goal for this project is to be able to create a model which can associate different data modalities (namely biopsy image, clinical text, and genomic), and peform zero shot predictions.  
+					</Paragraph>
+					<Paragraph>
+						Zero shot prediction is a task where models make predictions on datapoints from classifications unseen during training. 
+						The motivation for our zero shot predictive capability comes from how the model shares a singular latent space across all modalities. 
+						Theoretically, a well-trained constrastive learning model would be able to encode any new data into a relevant part of the shared latent space based on the information stored in that data, and then would be able to decode a nearby encoding into a different modality. 
 					</Paragraph>
 					<Paragraph>
 						Recently, <Link as={NextLink} href="https://imagebind.metademolab.com/">ImageBind <ExternalLinkIcon/></Link> demonstrated the capability for Deep Learning models to learn a shared latent space across multiple data modalities, even in cases where most data points do not contain all modalities. 
 					</Paragraph>
 					<Paragraph>
-						Moreover, a recent publication named <Link as={NextLink} href="https://arxiv.org/abs/2306.07831">MI-Zero <ExternalLinkIcon/></Link> attempts to create a similar shared latent space within patient medical data in order to learn an association between images and   
-					</Paragraph>
-					<Paragraph>
-						We hope to be able to create a model which is similar in goal and function to MIZero, but also able to utilize other important modalities as demonstrated through ImageBind.
+						Through this project, I have gained a lot of hands-on experience on working with contrastive learning models, from preprocessing massive TCGA datasets with multiple modalities, to coding, training, and tuning complex models that take advantage of pre-existing work like pre-trained CLIP encoders.
 					</Paragraph>
 				</WorkSubSection>
 			</WorkSection>

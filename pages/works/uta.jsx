@@ -49,6 +49,7 @@ const Page = () => {
 				<LinkItem href={`/works/uta/#lab`} mt={-4} ml={3}> Lab </LinkItem>
 				<LinkItem href={`/works/uta/#grade`} mt={-4} ml={3}> Staff Meetings </LinkItem>
 				<LinkItem href={`/works/uta/#dev`}> Course Dev Responsibilities </LinkItem>
+				<LinkItem href={`/works/uta/#takeaways`}> Takeaways </LinkItem>
 			</SideBar>
 
 			<WorkTitle 
@@ -176,6 +177,18 @@ const Page = () => {
 				</Paragraph>
 			</WorkSection> 
 
+			<WorkSection id="takeaways" header="Takeaways as a CS1470 TA">
+				<Paragraph>
+					As my first experience as a Teaching Assistant, this job has been a great learning opportunity in many ways.
+				</Paragraph>
+				<Paragraph>
+					Firstly, I am very grateful to have worked with many excellent coders and learned from their perspectives, both as fellow staff members and students.
+				</Paragraph>
+				<Paragraph>
+					I have also continued to grow in my technical abilities as I worked through, developed, and fixed course material. 
+					In particular, I enjoyed being able to explore more modern DL concepts like attentioning, transformers, and generative models (e.g. GANs), just to name a few. 
+				</Paragraph>
+			</WorkSection>
 
 		</Layout>
 	)
