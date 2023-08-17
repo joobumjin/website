@@ -55,7 +55,7 @@ export const SkillDesc = ({title, children}) => {
 		<Box mt={6}>
 			<Heading as="h5" variant="skill-title"> {title} </Heading>
 			{children}
-			<Divider mt={6} />
+			<Divider mt={6} variant="thick"/>
 		</Box>
 	)
 }

@@ -64,7 +64,7 @@ const Page = () => {
 					>
 						Work
 					</Heading>
-					<Container maxW="container.lg">
+					<Container maxW="container.lg" mt={6}>
 						<SimpleGrid 
 							columns={{base:1, md:2}} 
 							spacingX="20px" 
