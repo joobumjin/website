@@ -128,7 +128,8 @@ const Page = () => {
 						<SkillDesc title="Machine Learning">
 							<UnorderedList>
 								<ListItem>Experienced with most widely used machine learning frameworks like Tensorflow, Keras, and PyTorch.</ListItem>
-								<ListItem>Familiar with Machine Learning research on large scale datasets.</ListItem>
+								<ListItem>Proficient in Machine Learning research on large scale datasets.</ListItem>
+								<ListItem>Practiced in model training, tuning, and evaluation.</ListItem>
 							</UnorderedList>
 						</SkillDesc>
 						<SkillDesc title="Software Engineering">
