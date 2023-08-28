@@ -12,11 +12,13 @@ import Section from '../components/section'
 // import Paragraph from '../components/paragraph'
 // import { BioSection, BioYear } from '../components/bios'
 import Layout from '../components/layouts/article'
-import { WorkCardImg, WorkCardDesc } from '../components/grid-item'
+import { WorkCardImg, WorkCardDesc, InterestCardImg, InterestCardDesc } from '../components/grid-item'
 import { UTASkills, SinghSkills, MahmoodSkills, SkillDesc } from '../components/skill'
 import utaThumb from '../public/images/uta.png'
 import brownCS from '../public/images/brown_cs.png'
 import mahmoodThumb from '../public/images/mahmood_lab.png'
+import daebakThumb from '../public/images/daebaklogo.jpg'
+import tkmaThumb from '../public/images/tkma.jpg'
 import { css } from '@emotion/react'
 
 
@@ -140,6 +142,63 @@ const Page = () => {
 								<ListItem>Adept at testing code functionality by writing unit and system tests.</ListItem>
 							</UnorderedList>
 						</SkillDesc>
+					</Container>
+				</Section>
+
+				<Section delay={0.3}>
+					<Heading 
+						as="h3" 
+						variant="section-title" 
+						id="interests" 
+						css={css`
+							scroll-margin-top: 80px;
+						`}
+					>
+						Interests
+					</Heading>
+					<Container maxW="container.lg" mt={6}>
+						<SimpleGrid 
+							columns={{base:1, md:2}} 
+							spacingX="20px" 
+							spacingY="20px"
+							mb="20px"
+						>
+							<Section>
+								<InterestCardImg id="daebak" title="DAEBAK eBoard" thumbnail={daebakThumb}/>
+							</Section>
+							<Section>
+								<InterestCardDesc 
+									id="daebak" 
+									position="Performer, Secretary" 
+									name="DAEBAK k-pop Dance"
+								>
+								</InterestCardDesc>
+							</Section>
+
+							<Section>
+								<InterestCardImg id="tkd" title="Taekwondo" thumbnail={tkmaThumb}/>
+							</Section>
+							<Section>
+								<InterestCardDesc 
+									id="tkd" 
+									position="Black Belt, Master, Competitor" 
+									name="Brown Taekwondo" 
+								>
+								</InterestCardDesc>
+							</Section>
+
+							{/*<Section>
+								<InterestCardImg id="keebs" title="Keyboards" thumbnail={brownCS}/>
+							</Section>
+							<Section>
+								<InterestCardDesc 
+									id="keebs" 
+									position="Keyboard Maker" 
+									name="Keebs" 
+								>
+								</InterestCardDesc>
+							</Section>*/}
+						</SimpleGrid>
 					</Container>
 				</Section>				
 			</Container>

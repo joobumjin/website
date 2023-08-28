@@ -83,8 +83,8 @@ const NavBar = props => {
 						Skills
 					</LinkItem>
 
-					<LinkItem href="/#contact" path={path}>
-						Contact
+					<LinkItem href="/#interests" path={path}>
+						Interests
 					</LinkItem>
 
 					<LinkItem href="https://www.overleaf.com/read/gpmckphwbtkh">
@@ -116,8 +116,8 @@ const NavBar = props => {
 									Skills
 								</MenuItem>
 
-								<MenuItem as={Link} href="/#contact">
-									Contact
+								<MenuItem as={Link} href="/#interests">
+									Interests
 								</MenuItem>
 
 								<MenuItem as={Link} href="https://www.overleaf.com/read/gpmckphwbtkh">

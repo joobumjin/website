@@ -84,10 +84,6 @@ export const WorkCardImg = ({ id, title, thumbnail }) => (
 			        &:hover {
 			          opacity: 0.8;
 			        }
-
-			        &:hover ${title} {
-			          text-decoration: underline;
-			        }
 		        `}
 			>
 				<Image
@@ -107,14 +103,12 @@ export const WorkCardDesc = ({ id, position, team, skills }) => (
 	<Box w="100%" h={{base: "250px", sm: "230px", md: "210px", lg: "230px"}}  align="left">
 		<Grid 
 			h="100%"
-			templateAreas={{base: `'all'`,
-							md:`'desc'
-							   'more'`}}
-			gridTemplateRows={{base: "4fr", md: "4fr 1fr"}}
+			templateAreas={{base: `'desc'
+						     'more'`}}
+			gridTemplateRows="4fr 1fr"
+			display={{base:"none", md: "grid"}}
 		>
-			<Box
-				area={{base: "all", md: "desc"}}
-			>
+			<Box area="desc">
 				<LinkBox 
 					as = {NextLink}
 					href={`/works/${id}`}
@@ -123,6 +117,7 @@ export const WorkCardDesc = ({ id, position, team, skills }) => (
 			        css={css`
 				        &:hover {
 				          opacity: 0.8;
+				          text-decoration: underline;
 				        }
 
 				        &:hover ${position} {
@@ -140,13 +135,8 @@ export const WorkCardDesc = ({ id, position, team, skills }) => (
 				{skills}
 			</Box>
 
-			<Box
-				area={{base: "all", md: "more"}}
-			>
-				<NextLink 
-					href={`/works/${id}`}
-					// area={{base: "all", md: "more"}}
-				>
+			<Box area="more">
+				<NextLink href={`/works/${id}`}>
 					<Button mt={{base:'2', lg:'0'}}>
 						Learn More<ChevronRightIcon />
 					</Button>
@@ -154,6 +144,144 @@ export const WorkCardDesc = ({ id, position, team, skills }) => (
 			</Box>
 
 		</Grid>
+		<Box display={{base:"inline-block", md: "none"}}>
+			<LinkBox 
+				as = {NextLink}
+				href={`/works/${id}`}
+				cursor="pointer"
+				scroll={false}
+		        css={css`
+			        &:hover {
+			          opacity: 0.8;
+			          text-decoration: underline;
+			        }
+		        `}
+			>
+				<Text fontSize={14}>{position}</Text>
+
+				<LinkOverlay as="div" href={`/works/${id}`}>
+					<Text mb="3" fontSize={20}>{team}</Text>
+				</LinkOverlay>
+			</LinkBox>
+
+			{skills}
+
+			<Box>
+			<NextLink 
+				href={`/works/${id}`}
+			>
+				<Button mt="6">
+					Learn More<ChevronRightIcon />
+				</Button>
+			</NextLink>
+			</Box>
+		</Box>
+	</Box>
+)
+
+export const InterestCardImg = ({ id, title, thumbnail }) => (
+	<AspectRatio
+		ratio={15 / 8}  
+		w="95%" 
+		align="center"  
+		bg="white" 
+		rounded="lg" 
+		overflow="hidden"
+		ml={{base: "2.5%", md: "5%"}}
+		shadow='sm'
+	>
+		<Center h="100%">
+			<LinkBox 
+				as = {NextLink}
+				href={`/interests/${id}`}
+				cursor="pointer"
+				scroll={false}
+		        css={css`
+			        &:hover {
+			          opacity: 0.8;
+			        }
+		        `}
+			>
+				<Image
+					src={thumbnail}
+					alt={title}
+					className="grid-item-thumbnail"
+					placeholder="blur"
+					loading="lazy"
+					fit="cover"
+				/>
+			</LinkBox>
+		</Center>
+	</AspectRatio>
+)
+
+export const InterestCardDesc = ({ id, position, name }) => (
+	<Box w="100%" h={{base: "250px", sm: "230px", md: "210px", lg: "230px"}}  align="left">
+		<Grid 
+			h="100%"
+			templateAreas={{base: `'desc'
+						     'more'`}}
+			gridTemplateRows="4fr 1fr"
+			display={{base:"none", md: "grid"}}
+		>
+			<Box area="desc">
+				<LinkBox 
+					as = {NextLink}
+					href={`/works/${id}`}
+					cursor="pointer"
+					scroll={false}
+			        css={css`
+				        &:hover {
+				          opacity: 0.8;
+			          	  text-decoration: underline;
+				        }
+			        `}
+				>
+					<LinkOverlay as="div" href={`/interests/${id}`}>
+						<Text fontSize={14}>{position}</Text>
+						<Text mb={{base: 1, md: 3}} fontSize={20}>{name}</Text>
+					</LinkOverlay>
+				</LinkBox>
+			</Box>
+
+			<Box area="more">
+				<NextLink href={`/interests/${id}`}>
+					<Button mt={{base:'2', lg:'0'}}>
+						Learn More<ChevronRightIcon />
+					</Button>
+				</NextLink>
+			</Box>
+
+		</Grid>
+		<Box display={{base:"inline-block", md: "none"}}>
+			<LinkBox 
+				as = {NextLink}
+				href={`/interests/${id}`}
+				cursor="pointer"
+				scroll={false}
+		        css={css`
+			        &:hover {
+			          opacity: 0.8;
+			          text-decoration: underline;
+			        }
+		        `}
+			>
+				<LinkOverlay as="div" href={`/interests/${id}`}>
+					<Text fontSize={14}>{position}</Text>
+					<Text mb="3" fontSize={20}>{name}</Text>
+				</LinkOverlay>
+			</LinkBox>
+
+			<Box>
+			<NextLink 
+				href={`/works/${id}`}
+			>
+				<Button mt="6">
+					Learn More<ChevronRightIcon />
+				</Button>
+			</NextLink>
+			</Box>
+		</Box>
 	</Box>
 )
 

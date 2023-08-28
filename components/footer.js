@@ -1,8 +1,9 @@
-import {Container, Box, Button, Icon, Link} from '@chakra-ui/react'
+import {Container, Box, Button, Icon, Link, Text} from '@chakra-ui/react'
 import {
 	IoLogoGithub,
 	IoLogoLinkedin,
-	IoMail
+	IoMail,
+	IoHeart
 } from 'react-icons/io5'
 
 export const ContactFooter = () => {
@@ -36,6 +37,9 @@ export const ContactFooter = () => {
 					/>
 				</Link>
 			</Box>
+			<Text align='center' mt={3} fontSize={13} fontWeight={100}>
+				Designed with <Icon as={IoHeart} color="teal"/> by Bumjin Joo. Inspired by <Link href="https://craftz.dog">craftzdog</Link>. 
+			</Text>
 		</Container>
 	)
 }
