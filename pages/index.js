@@ -12,7 +12,7 @@ import Section from '../components/section'
 // import Paragraph from '../components/paragraph'
 // import { BioSection, BioYear } from '../components/bios'
 import Layout from '../components/layouts/article'
-import { WorkCardImg, WorkCardDesc, InterestCardImg, InterestCardDesc } from '../components/grid-item'
+import { WorkCardImg, WorkCardDesc, InterestCardImg, InterestCardDesc, InterestGridItem } from '../components/grid-item'
 import { UTASkills, SinghSkills, MahmoodSkills, SkillDesc } from '../components/skill'
 import utaThumb from '../public/images/uta.png'
 import brownCS from '../public/images/brown_cs.png'
@@ -164,27 +164,15 @@ const Page = () => {
 							mb="20px"
 						>
 							<Section>
-								<InterestCardImg id="daebak" title="DAEBAK eBoard" thumbnail={daebakThumb}/>
-							</Section>
-							<Section>
-								<InterestCardDesc 
-									id="daebak" 
-									position="Performer, Secretary" 
-									name="DAEBAK k-pop Dance"
-								>
-								</InterestCardDesc>
+								<InterestGridItem id="daebak" title="DAEBAK k-pop Dance" thumbnail={daebakThumb}>
+									Dancer, eBoard Member, Teacher
+								</InterestGridItem>
 							</Section>
 
 							<Section>
-								<InterestCardImg id="tkd" title="Taekwondo" thumbnail={tkmaThumb}/>
-							</Section>
-							<Section>
-								<InterestCardDesc 
-									id="tkd" 
-									position="Black Belt, Master, Competitor" 
-									name="Brown Taekwondo" 
-								>
-								</InterestCardDesc>
+								<InterestGridItem id="tkd" title="Taekwondo" thumbnail={tkmaThumb}>
+									4th Degree Black Belt, Master, Competitor
+								</InterestGridItem>
 							</Section>
 
 							{/*<Section>

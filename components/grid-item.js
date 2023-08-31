@@ -179,42 +179,6 @@ export const WorkCardDesc = ({ id, position, team, skills }) => (
 	</Box>
 )
 
-export const InterestCardImg = ({ id, title, thumbnail }) => (
-	<AspectRatio
-		ratio={15 / 8}  
-		w="95%" 
-		align="center"  
-		bg="white" 
-		rounded="lg" 
-		overflow="hidden"
-		ml={{base: "2.5%", md: "5%"}}
-		shadow='sm'
-	>
-		<Center h="100%">
-			<LinkBox 
-				as = {NextLink}
-				href={`/interests/${id}`}
-				cursor="pointer"
-				scroll={false}
-		        css={css`
-			        &:hover {
-			          opacity: 0.8;
-			        }
-		        `}
-			>
-				<Image
-					src={thumbnail}
-					alt={title}
-					className="grid-item-thumbnail"
-					placeholder="blur"
-					loading="lazy"
-					fit="cover"
-				/>
-			</LinkBox>
-		</Center>
-	</AspectRatio>
-)
-
 export const InterestCardDesc = ({ id, position, name }) => (
 	<Box w="100%" h={{base: "250px", sm: "230px", md: "210px", lg: "230px"}}  align="left">
 		<Grid 
@@ -283,6 +247,54 @@ export const InterestCardDesc = ({ id, position, name }) => (
 			</Box>
 		</Box>
 	</Box>
+)
+
+export const InterestGridItem = ({ children, id, title, thumbnail }) => (
+  <Box w="100%" textAlign="center">
+    <LinkBox
+      as={NextLink}
+      href={`/works/${id}`}
+      scroll={false}
+      cursor="pointer"
+      css={css`
+        &:hover {
+          opacity: 0.8;
+          text-decoration: underline;
+        }
+      `}
+    >
+	    <AspectRatio
+			ratio={15 / 8}  
+			w="95%" 
+			align="center"  
+			bg="white" 
+			rounded="lg" 
+			overflow="hidden"
+			ml={{base: "2.5%", md: "5%"}}
+			shadow='sm'
+		>
+			<Center h="100%">
+				<Image
+					src={thumbnail}
+					alt={title}
+					className="grid-item-thumbnail"
+					placeholder="blur"
+					loading="lazy"
+					fit="cover"
+				/>
+			</Center>
+		</AspectRatio>
+      <LinkOverlay 
+      	as="div" 
+      	href={`/interests/${id}`}
+      >
+        <Text mt={2} fontSize={20}>
+          {title}
+        </Text>
+        <Text fontSize={14}>{children}</Text>
+      </LinkOverlay>
+    </LinkBox>
+  </Box>
 )
 
 export const GridItemStyle = () => {
