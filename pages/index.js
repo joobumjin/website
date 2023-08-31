@@ -136,7 +136,7 @@ const Page = () => {
 						</SkillDesc>
 						<SkillDesc title="Software Engineering">
 							<UnorderedList>
-								<ListItem>Comfortable with virtualization throguh Conda/Python VEnvs and containerization through Docker.</ListItem>
+								<ListItem>Comfortable with virtualization through Conda/Python VEnvs and containerization through Docker.</ListItem>
 								<ListItem>Skilled at version control management through Git.</ListItem>
 								<ListItem>Experienced with Agile Development patterns.</ListItem>
 								<ListItem>Adept at testing code functionality by writing unit and system tests.</ListItem>
