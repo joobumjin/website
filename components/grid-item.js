@@ -183,7 +183,7 @@ export const InterestGridItem = ({ children, id, title, thumbnail }) => (
   <Box w="100%" textAlign="center">
     <LinkBox
       as={NextLink}
-      href={`/works/${id}`}
+      href={`/interests/${id}`}
       scroll={false}
       cursor="pointer"
       css={css`
